@@ -1,16 +1,20 @@
 # 参考https://jekyllrb.com/docs/configuration/front-matter-defaults/ 进行设置
-title: SEU-HPC
-description: 饮水思源，积健为雄
-logo: https://qiniuyun.hrlee.cn/CSWu-banner.png
+#title: SEU-HPC
+#description: 饮水思源，积健为雄
+#logo: https://qiniuyun.hrlee.cn/CSWu-banner.png
+title: SEU-HPC # 站点标题
+url:https://cswu-challenge.github.io
+baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/assets`前也要加，即`/your_baseurl/assets`。这一项结尾不要有'/'。
+
 defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/front-matter-defaults/>功能进行配置
   - scope:
       path: "" # an empty string here means all files in the project
     values: # 以下配置项也可以在任意页面自定义
-      jekyll-theme-cswu: # 自定义主题的名字空间
+      jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
         default:
           body:
-            theme-base: theme-base-08 # 可选的主题色包括08~0f，见 <https://github.com/poole/lanyon>
-            layout-reverse: false # 开启后sidebar在右边，反之左边
+            theme-base: theme-base-07 # 可选的主题色包括08~0f，见 <https://github.com/poole/lanyon>
+            layout-reverse: true # 开启后sidebar在右边，反之左边
             sidebar-overlay: true # 开启后正文不随sidebar移动而移动
           append_to_head: # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么。定制插件的方式可以参考这篇文章 <https://wu-kan.cn/_posts/2019-01-18-基于Jekyll搭建个人博客/>
             - | #一些页面优化标签，看不懂可跳过
@@ -28,10 +32,10 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 title="RSS"
                 type="application/rss+xml"
               />
-            - | # 网站小图标
+            - | # 网站小图标，可换成你自己的图片，改href中的部分即可
               <link
                 rel="apple-touch-icon-precomposed"
-                href="https://qiniuyun.hrlee.cn/CSWu-banner.png"
+                href="https://i.loli.net/2021/04/10/HI95xRVNA6zwseO.png"
               />
               <link
                 rel="shortcut
@@ -48,6 +52,23 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 async="async"
                 src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js"
               ></script>
+            - | # 网站背景图片，分竖屏、宽屏；改链接即可，不想用可以把这一项全删掉；要换壁纸图片的话可把url内的部分换成你自己的，比如你放在 /assets/image/background.jpg，那就改成 url(/assets/image/background.jpg)
+              <style>
+                .wrap {
+                  transition-property: width,background-size,transform;
+                  transition-duration: .3s;
+                  transition-timing-function: ease-in-out;
+                  min-height: 100%;
+                  display: inline-block;
+                }
+                .sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
+                  width: calc(100% - 14rem);
+                  transform: translateX(14rem);
+                }
+                .layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
+                  transform: translateX(0);
+                }
+              </style>
             - | # 网站字体，要换字体建议架梯子上<https://fonts.google.com/>挑选，再通过fonts.loli.net 加速引入
               <style>
                 .sidebar,
@@ -87,6 +108,23 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 img {
                   display: inline-block;
                   margin: 0;
+                }
+              </style>
+            - | # 彩虹滚动条，仅对Chrome系浏览器生效
+              <style>
+                ::-webkit-scrollbar {
+                  width: 3px;
+                  height: 3px;
+                }
+                ::-webkit-scrollbar-thumb {
+                  background-image: linear-gradient(45deg, Cyan 0%, Magenta 50%, Yellow 100%);
+                }
+              </style>
+            - | # 选中字体颜色
+              <style>
+                ::selection {
+                  color: White;
+                  background: Black;
                 }
               </style>
             - | #修复行内图片默认样式
@@ -267,6 +305,18 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                     src='https://cdn.jsdelivr.net/npm/busuanzi@2.3.0'
                     async='async'
                   ></script>
+                </div>
+              - | # 觉得我的主题好用的话，让更多的人知道它吧！
+                <div>
+                  <i class="fas fa-thumbs-up fa-fw"></i>
+                  <a href="https://jekyll-theme-WuK.wu-kan.cn">
+                    jekyll-theme-WuK
+                  </a>
+                </div>
+              - | # Copyright声明
+                <div>
+                  <i class="fas fa-copyright fa-fw"></i>
+                  2012-2021 SYSU-SCC
                 </div>
             wordcount: # 全站字数统计
               enable: true # 本地调试时建议关闭，非常影响站点生成速度（所需时间与博文数量的平方成正比）
@@ -479,3 +529,14 @@ kramdown: # 见<https://kramdown.gettalong.org/options.html>
       line_numbers: false #渲染出来的效果好鬼畜
     span:
       disable: true
+# 以下为 githubpage上不可修改的参数，见<https://help.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll>
+#lsi: false # 为相关文章生成索引
+#safe: true # 禁用自定义插件
+#source: [your repo's top level directory] # Jekyll 读取文件的路径
+#incremental: false # 增量生成
+#highlighter: rouge # 代码高亮器
+#gist:
+#  noscript: false
+#kramdown:
+#  math_engine: mathjax
+#  syntax_highlighter: rouge
