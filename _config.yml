@@ -99,21 +99,21 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           sidebar: # 此配置项下是一些关于侧边栏的配置
             disable: false # 是否不显示sidebar
             nav: # 导航部分的内容，你也可以自己增加文字、图标（来自fontawesome）和对应的链接
-              - title: '<i class="fas fa-home fa-fw"></i> index'
-                href: /index/
+              - title: '<i class="fas fa-home fa-fw"></i> Index'
+                href: /
               - title: '<i class="fas fa-award fa-fw"></i> Honors'
                 href: /Honors/
               - title: '<i class="fas fa-users fa-fw"></i> Members'
                 href: /Members/
-              - title: '<i class="fas fa-file-powerpoint fa-fw"></i> Achieve'
-                href: /Achieve/
+              - title: '<i class="fas fa-file-powerpoint fa-fw"></i> Talks'
+                href: /Talks/
               - title: '<i class="fas fa-address-book fa-fw"></i> Contact'
                 href: /Contact/
               - title: '<i class="fab fa-github fa-fw"></i> GitHub'
-                href: https://github.com/CSWU-Challenge
+                href: https://github.com/SYSU-SCC
             simple_jekyll_search: # 侧边栏的全站搜索
               enable: true
-              full_text_search: true # 全文搜索可能导致缓慢的搜索和加载
+              full_text_search: false # 可能导致缓慢的搜索和加载
               append: | # 如果看不懂就不改
                 <style>
                   #sidebar-search-input {
@@ -240,7 +240,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                     document.getElementById("run_time_hour"),
                     document.getElementById("run_time_minute"),
                     document.getElementById("run_time_second"),
-                    "01/01/2017 12:00:00")//SEU打asc太少了。。
+                    "10/04/2012 11:03:56")// 建队时间？
                   </script>
                 </div>
               - | # 不蒜子页面统计，看不懂可不改
