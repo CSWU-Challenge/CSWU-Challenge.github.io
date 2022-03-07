@@ -1,3 +1,4 @@
+# 参考https://jekyllrb.com/docs/configuration/front-matter-defaults/ 进行设置
 theme: jekyll-theme-minimal
 title: SEU-HPC
 description: 饮水思源，积健为雄
