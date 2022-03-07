@@ -372,57 +372,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   min-width: 66.6%;
                 }
               </style>
-        home: # 展示页的配置可跳过，详见<https://revealjs.com/>
-          append_to_section_tag:
-            - key: data-markdown
-            - key: data-separator # 水平展示页分隔符
-              value: <!-- .slide -->
-            - key: data-separator-vertical # 垂直展示页分隔符
-              value: <!-- .slide vertical=true -->
-            - key: data-background-color
-              value: "White"
-          prepend: |
-            <link
-              rel="stylesheet"
-              href="https://cdn.jsdelivr.net/combine/npm/reveal.js@4.1.1/dist/reveal.min.css,npm/reveal.js@4.1.1/dist/theme/serif.min.css"
-            />
-            <style>
-              .sidebar {
-                line-height: 1.5;
-              }
-              .reveal .slides {
-                text-align: left;
-              }
-              .reveal a {
-                color: #268BD2;
-              }
-            </style>
-          append: |
-            <script
-              async="async"
-              src="https://cdn.jsdelivr.net/combine/npm/reveal.js@4.1.1/dist/reveal.min.js,npm/reveal.js@4.1.1/plugin/markdown/markdown.min.js,npm/reveal.js@4.1.1/plugin/math/math.min.js,npm/reveal.js@4.1.1/plugin/highlight/highlight.min.js"
-              onload="
-              for(let x of document.getElementsByClassName('wrap'))
-                x.classList.add('reveal');
-              Reveal.initialize({
-                height: '100%',
-                hash: true,
-                mouseWheel: true,
-                navigationMode: 'linear',
-                plugins: [ RevealMarkdown,RevealMath,RevealHighlight ]
-              });
-            "></script>
-
-compress_html: # <https://github.com/penibelst/jekyll-compress-html>
-  clippings: all
-  comments: [] # 注释不能压缩，否则 reveal.js 的 ppt切屏受影响
-  endings: all
-  ignore:
-    envs: []
-  blanklines: false
-  profile: false
-  startings: []
-
 # githubpage上支持的插件见<https://pages.github.com/versions/>
 plugins: # <https://jekyllrb.com/docs/plugins/>
   - jekyll-readme-index # 使用readme做index，从而和github渲染效果一致
@@ -432,25 +381,5 @@ plugins: # <https://jekyllrb.com/docs/plugins/>
   - jekyll-feed # 为站点生成RSS源
   - jekyll-remote-theme # 使用remote_theme插件实现主题的前后分离，详见<https://github.com/benbalter/jekyll-remote-theme/>
 
-remote_theme: https://github.com/wu-kan/jekyll-theme-WuK@4.1.0 #使用固定版本号以防止主题更新导致站点显示错乱
-
 readme_index: # 缺失index.md和index.html时，使用README.md代替之
   with_frontmatter: true # 支持带有yaml头的README
-
-permalink: pretty
-# timezone: Asia/Shanghai # 解决githubpage显示时间不正确的问题，见<https://www.iana.org/time-zones>
-future: true # 允许发布时间在未来的文章
-
-# limit_posts: 999 # 限制博文数量
-# encoding: utf-8
-# 以下为 githubpage上不可修改的参数，见<https://help.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll>
-#lsi: false # 为相关文章生成索引
-#safe: true # 禁用自定义插件
-#source: [your repo's top level directory] # Jekyll 读取文件的路径
-#incremental: false # 增量生成
-#highlighter: rouge # 代码高亮器
-#gist:
-#  noscript: false
-#kramdown:
-#  math_engine: mathjax
-#  syntax_highlighter: rouge
