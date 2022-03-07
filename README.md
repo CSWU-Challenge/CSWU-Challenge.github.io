@@ -1,8 +1,3 @@
----
-title: Index
-layout: page
----
-
 
 ## 东南大学超算团队
 
