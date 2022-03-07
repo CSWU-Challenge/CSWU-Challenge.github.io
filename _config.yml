@@ -3,3 +3,23 @@ theme: jekyll-theme-minimal
 title: SEU-HPC
 description: 饮水思源，积健为雄
 logo: https://qiniuyun.hrlee.cn/CSWu-banner.png
+jekyll-toc: # 侧边栏的目录插件，https://github.com/allejo/jekyll-toc
+  enable: true
+  prepend: | # 目录过长时自动折叠
+    <style>
+      #toc {
+        overflow: auto auto;
+        max-height: 66.6vh;
+      }
+    </style>
+append_to_sidebar:
+  #- <script defer="defer" src="https://cdn.jsdelivr.net/gh/poole/lanyon@v1.1.0/public/js/script.min.js"></script> # 点击空白处而非按钮从而关闭侧边栏的插件，可选
+  - | #修复点击侧边栏按钮回到顶部的问题
+    <style>
+      .sidebar-checkbox {
+        display: none;
+      }
+      .sidebar-toggle {
+        position: fixed;
+      }
+    </style>
