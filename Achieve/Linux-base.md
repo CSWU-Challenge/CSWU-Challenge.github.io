@@ -8,8 +8,12 @@
 
 &emsp;&emsp;此外，如果以后接触计算机领域较多的话，使用Linux是不可避免的，迟早都要学，不如借助超算竞赛打打基础。
 
-#Linux系统简介
-&emsp;&emsp;各种历史渊源和深奥的定义这里就不赘述了，简而言之：Linux是一个开源的操作系统内核，基于这个内核，各路神仙开发出了各种发行版，如Ubantu，Debian，CentOS。Linux相比于Windows的最大的特点在于其强大的命令行系统，你可以在终端输入命令来进行几乎任何你想做的操作（类似于Windows的cmd），而不需要桌面系统。Linux的各个发行版大同小异，所使用的命令几乎都是一致的。因此，入门Linux，实际上就是学习使用命令。
+# Linux系统的分类简介
+
+- debian：图形化界面，体积小，稳定性最高，安装包丰富，文档相对较少，但是适用于低配置的vps，128M内存就可以流畅运行debian，使用apt-get命令安装软件。
+- ubuntu（乌帮图）：与debian有千丝万缕的关系，图形化界面系统，虽然是linux的系统，但是个人觉得更适合用作客户端操作系统而非服务器操作系统,使用apt-get命令安装软件。
+- redhat:命令行界面，有 redhat和redhat enterprise 两个版本，前者免费，后者商用。redhat于2003年停止开发，由Fedora Core代替，使用rpm,yum命令安装软件。
+- centos：其实就是redhat enterprise的免费克隆版，但是redhat enterprise是商用的，区别在于因为linux系统本身就是遵守开源协议的，而且redhat enterprise最主要卖的是服务。命令行界面，需要熟悉linux的命令，但是文档丰富，解决问题相对简单。使用yum命令安装软件，可以先安装wget-相当于迅雷的下载工具。
 
 
 # 安装Linux
