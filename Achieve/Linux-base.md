@@ -143,6 +143,8 @@ ServerFilePath为文件在服务器上的路径，TargetFilePath为存到本地�
 
 # Vim/Vi的基本使用
 
+# 编写Shell脚本
+
 # Anaconda的基本使用
 *[^_^]: Anaconda这块可以独立拎出来，应该不是Linux基础。哪位有缘人把他拎出来？
 # 优雅的键入指令
