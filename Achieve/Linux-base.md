@@ -9,6 +9,8 @@
 &emsp;&emsp;此外，如果以后接触计算机领域较多的话，使用Linux是不可避免的，迟早都要学，不如借助超算竞赛打打基础。
 #Linux系统简介
 &emsp;&emsp;各种历史渊源和深奥的定义这里就不赘述了，简而言之：Linux是一个开源的操作系统内核，基于这个内核，各路神仙开发出了各种发行版，如Ubantu，Debian，CentOS。Linux相比于Windows的最大的特点在于其强大的命令行系统，你可以在终端输入命令来进行几乎任何你想做的操作（类似于Windows的cmd），而不需要桌面系统。Linux的各个发行版大同小异，所使用的命令几乎都是一致的。因此，入门Linux，实际上就是学习使用命令。
+
+
 # 安装Linux
 
 &emsp;&emsp;在个人电脑上安装Linux有这些方案：Win+Linux双系统，Win上安装虚拟机，使用Windows的Linux子系统服务（WSL）。第一个方案最折腾，但是可以获得完整纯正的Linux体验；第二个方案不是很折腾，风险很低，可以获得完整的Linux体验，但是由于同时运行了两个系统，比较吃配置，用起来可能不是很流畅。第三个方案安装最简单，由于是Win自带的子系统，与Win兼容很好，可以在Linux和Win之间无缝切换（Linux以终端窗口的形式运行），但是可能无法获得完整的Linux体验，而且WSL2本质上还是虚拟机。至于在WSL上安装软件与配置环境是否与原生Linux无异，由于笔者没有实际使用过，所以暂时无法告知。
@@ -23,5 +25,25 @@
 
 ![example1](https://github.com/CSWU-Challenge/CSWU-Challenge.github.io/raw/84f3935531ab1a81e7b7e9576e736d01fc28b868/Achieve/imgs/ssh_example1.png#pic_center)
 
-&emsp;&emsp;输入命令后会提示你输入密码，注意命令行中的密码都是不显示的，不要以为他坏了。
+&emsp;&emsp;输入命令后会提示你输入密码，注意命令行中的密码都是不回显的，不要以为他坏了。
 ![example2](https://github.com/CSWU-Challenge/CSWU-Challenge.github.io/raw/84f3935531ab1a81e7b7e9576e736d01fc28b868/Achieve/imgs/ssh_example3.png)
+
+# 优雅的键入指令
+
+很遗憾优雅的键入指令在任何一门课程上都是学不到的，只有实践或者口耳相传才可以做到
+
+## 自动补全
+
+1、tab键补全
+
+几乎所有terminal都可以通过`tab`键进行默认补全，补全规则为：
+- 当候选命令只存在一个或在候选词库中前缀相同的时候，按一下`tab`即可自动补全命令
+- 当候选命令存在多个无法选择时，连续按两次`tab`可以显示所有候选词库
+
+2、历史补全
+
+CentOS下，有一个很智能的功能，就是只输入一条历史命令的前几个字母，再按PageUp和PageDown键，就可以在以此字母为前缀的历史命令中上下切换。实现上是linux在终端对键盘的映射而已，和linux的某个发行版无关。只是CentOS下默认打开了这个功能，而ubuntu默认禁止了而已。
+- 打开`/etc/inputrc`文件
+- 搜索`history-search`
+- 删除前面的注释`#`号
+- 重新登录终端
