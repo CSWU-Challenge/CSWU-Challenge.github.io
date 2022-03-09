@@ -11,9 +11,9 @@
 # Linux系统的分类简介
 
 - debian：图形化界面，体积小，稳定性最高，安装包丰富，文档相对较少，但是适用于低配置的vps，128M内存就可以流畅运行debian，使用apt-get命令安装软件。
-- ubuntu（乌帮图）：与debian有千丝万缕的关系，图形化界面系统，虽然是linux的系统，但是个人觉得更适合用作客户端操作系统而非服务器操作系统,使用apt-get命令安装软件。
+- ubuntu：与debian有千丝万缕的关系，使用apt-get命令安装软件。学生接触的主要都是Desktop版，即有图形界面的系统，事实上Ubuntu Server 和 Ubuntu Desktop 是两个不一致的发行版，而且Server版的ubuntu非常好用，但个人laptop还是建议Desktop版。
 - redhat:命令行界面，有 redhat和redhat enterprise 两个版本，前者免费，后者商用。redhat于2003年停止开发，由Fedora Core代替，使用rpm,yum命令安装软件。
-- centos：其实就是redhat enterprise的免费克隆版，但是redhat enterprise是商用的，区别在于因为linux系统本身就是遵守开源协议的，而且redhat enterprise最主要卖的是服务。命令行界面，需要熟悉linux的命令，但是文档丰富，解决问题相对简单。使用yum命令安装软件，可以先安装wget-相当于迅雷的下载工具。
+- centos：其实就是redhat enterprise的免费克隆版，但是redhat enterprise是商用的，区别在于因为linux系统本身就是遵守开源协议的，而且redhat enterprise最主要卖的是服务。命令行界面，需要熟悉linux的命令，但是文档丰富，解决问题相对简单。使用yum命令安装软件，可以先安装wget。目前centos没有公司维护已经慢慢落伍。
 
 
 # 安装Linux
