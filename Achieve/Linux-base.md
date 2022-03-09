@@ -68,6 +68,19 @@
 **你可以同时打开多个终端进行ssh登录，或者在Xshell中再次双击会话，从而用多个终端操作同一个服务器。**
 
 **若想退出登录，输入命令**`exit`**，或者直接关闭终端。**
+### 允许以root ssh登录
+在一些情况下，服务器默认不允许用户以root权限ssh方式登录服务器
+但是可以修改相关配置
+修改 ssh 配置`/etc/ssh/sshd_config`
+```sudo vim /etc/ssh/sshd_config```
+将 PermitRootLogin 改为 yes
+```
+#LoginGraceTime 2m
+PermitRootLogin yes
+#StrictModes yes
+```
+重启ssh服务
+```sudo service ssh restart```
 
 # 与服务器进行文件传输
 
