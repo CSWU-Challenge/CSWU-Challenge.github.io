@@ -13,4 +13,6 @@
 
 # 远程连接服务器
 &emsp;&emsp;登录服务器在超算竞赛中是不可避免的，比如在服务器上跑程序，比赛结束上传文件到服务器等。
-&emsp;&emsp;方法很简单，在Linux终端（或Windows的cmd、powershell）中输入这个命令`ssh Username@IP`，其中Username用户名和IP地址以及密码在你服务器的控制台页面上都可以查到。输入命令后会提示你输入密码，注意命令行中的密码都是不显示的，不要以为他坏了。
+&emsp;&emsp;方法很简单，在Linux终端（或Windows的cmd、powershell）中输入这个命令`ssh Username@IP`，其中Username用户名和IP地址以及密码在你服务器的控制台页面上都可以查到。
+![example1](https://github.com/CSWU-Challenge/CSWU-Challenge.github.io/raw/84f3935531ab1a81e7b7e9576e736d01fc28b868/Achieve/imgs/ssh_example1.png#pic_center)
+输入命令后会提示你输入密码，注意命令行中的密码都是不显示的，不要以为他坏了。
