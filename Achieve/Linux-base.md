@@ -26,4 +26,4 @@
 
 ![example1](https://github.com/CSWU-Challenge/CSWU-Challenge.github.io/raw/84f3935531ab1a81e7b7e9576e736d01fc28b868/Achieve/imgs/ssh_example1.png#pic_center)
 
-&emsp;&emsp;输入命令后会提示你输入密码，注意命令行中的密码都是不显示的，不要以为他坏了。
+&emsp;&emsp;输入命令后会提示你输入密码，注意命令行中的密码都是不显示的，不要以为他坏了。。。
