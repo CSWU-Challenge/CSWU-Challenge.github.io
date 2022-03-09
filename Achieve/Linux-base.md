@@ -33,35 +33,35 @@
 
 &emsp;&emsp;其中Username用户名和IP地址以及密码在你服务器的控制台页面上都可以查到。如果服务器有提供端口号(Port)，则命令改为`ssh -p ServerPort Username@IP`
 
-![example1](https://github.com/CSWU-Challenge/CSWU-Challenge.github.io/raw/84f3935531ab1a81e7b7e9576e736d01fc28b868/Achieve/imgs/ssh_example1.png#pic_center)
+![example1](https://img.zsaqwq.com/images/2022/03/10/ssh_example1.png#pic_center)
 
 &emsp;&emsp;初次登录时会让你保存证书密钥之类的，输入yes即可。
-![example2](https://github.com/CSWU-Challenge/CSWU-Challenge.github.io/raw/84f3935531ab1a81e7b7e9576e736d01fc28b868/Achieve/imgs/ssh_example2.png)
+![example2](https://img.zsaqwq.com/images/2022/03/10/ssh_example2.png#pic_center)
 
 &emsp;&emsp;之后会提示你输入密码，注意命令行中的密码都是不回显的，不要以为他坏了。
-![example3](https://github.com/CSWU-Challenge/CSWU-Challenge.github.io/raw/84f3935531ab1a81e7b7e9576e736d01fc28b868/Achieve/imgs/ssh_example3.png)
+![example3](https://img.zsaqwq.com/images/2022/03/10/ssh_example3.png#pic_center)
 &emsp;&emsp;当‘$’（如果是root用户则是‘#’）前显示你登入的用户时，表明登录成功。
 ## 第三方SSH软件登录
 &emsp;&emsp;使用终端登录最为简洁优雅，但每次登录都需要输入命令、密码，比较麻烦，尤其是IP或者密码比较复杂的时候。实际上我们更常用的是第三方SSH软件，例如Xshell，Putty。我个人推荐Xshell，可以去[官网](https://www.xshell.com/zh/free-for-home-school/)申请使用学生免费版。（申请时勾选同时需要Xshell和Xftp）。
 
 &emsp;&emsp;打开Xshell后会自动弹出会话界面，点击新建。
 
-![xshell1](https://github.com/CSWU-Challenge/CSWU-Challenge.github.io/raw/aa549075131f5d38a05ac2e2ef5c930e4a1b5482/Achieve/imgs/Xshell_example1.png#pic_center)
+![xshell1](https://img.zsaqwq.com/images/2022/03/10/Xshell_example1.png#pic_center)
 
 在弹出的窗口中填写信息。名称即你创建的这个会话的名称，自己起一个有标识性的名字就行。主机填IP地址。如果你的服务器没有提供端口号，就默认为22。否则填写对应的端口号。
 
-![xshell2](https://github.com/CSWU-Challenge/CSWU-Challenge.github.io/raw/aa549075131f5d38a05ac2e2ef5c930e4a1b5482/Achieve/imgs/Xshell_example2.png#pic_center)
+![xshell2](https://img.zsaqwq.com/images/2022/03/10/Xshell_example2.png#pic_center)
 
 之后点击侧边栏的用户身份验证，填写用户名和密码。
 
-![xshell3](https://github.com/CSWU-Challenge/CSWU-Challenge.github.io/raw/aa549075131f5d38a05ac2e2ef5c930e4a1b5482/Achieve/imgs/Xshell_example3.png#pic_center)
+![xshell3](https://img.zsaqwq.com/images/2022/03/10/Xshell_example3.png#pic_center)
 
 点击确定之后，你会发现新建的会话出现在了会话窗口中。
-![xshell5](https://github.com/CSWU-Challenge/CSWU-Challenge.github.io/raw/e7cb2740908310140d3c19c74bda445d6f057ba3/Achieve/imgs/Xshell_example5.png#pic-pic_center)
+![xshell5](https://img.zsaqwq.com/images/2022/03/10/Xshell_example5.png#pic_center)
 
 双击他即可登录服务器。初次登录同样会提示保存证书，选择接受并永久保存。
 
-![xshell4](https://github.com/CSWU-Challenge/CSWU-Challenge.github.io/raw/aa549075131f5d38a05ac2e2ef5c930e4a1b5482/Achieve/imgs/Xshell_example4.png)
+![xshell4](https://img.zsaqwq.com/images/2022/03/10/Xshell_example4.png#pic_center)
 
 之后便可在Xshell的终端中操控服务器。以后每次登录服务器只需打开Xshell，双击会话即可自动登录。
 
@@ -91,7 +91,7 @@ PermitRootLogin yes
 
 与ssh一样，如果服务器没有使用特定的端口，-P参数可以不填。**（注意scp的-P是大写，ssh的-p是小写）**。LocalFilepath替换为你本地文件的路径，TargetFilePath替换为传到服务器的目标路径。回车后输入密码即可传送。
 
-![scp1](https://github.com/CSWU-Challenge/CSWU-Challenge.github.io/raw/49ad458f2c11bf767474a5b77f293120989aac47/Achieve/imgs/scp1.png#pic_center)
+![scp1](https://img.zsaqwq.com/images/2022/03/09/scp1.png)
 
 ## 从服务器下载文件至本地
 
@@ -107,11 +107,11 @@ ServerFilePath为文件在服务器上的路径，TargetFilePath为存到本地�
 
 用Xshell登录服务器后，点击上方工具栏的新建文件传输按钮，即可打开Xftp窗口并自动连接至服务器。
 
-![scp2](https://github.com/CSWU-Challenge/CSWU-Challenge.github.io/raw/456adcbe6d05b9576220e23c53d853d46d8e5a4a/Achieve/imgs/scp2.png)
+![scp2](https://img.zsaqwq.com/images/2022/03/10/scp2.png)
 
 拖动文件即可进行互相传输。
 
-![scp3](https://github.com/CSWU-Challenge/CSWU-Challenge.github.io/raw/456adcbe6d05b9576220e23c53d853d46d8e5a4a/Achieve/imgs/scp3.png)
+![scp3](https://img.zsaqwq.com/images/2022/03/10/scp3.png)
 
 当然你也可以选择使用其他的传输工具，如Filezilla。个人觉得Xshell+Xftp的集成化套装更方便使用。
 # 优雅的键入指令
