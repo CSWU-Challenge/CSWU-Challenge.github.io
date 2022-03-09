@@ -113,7 +113,7 @@ ServerFilePath为文件在服务器上的路径，TargetFilePath为存到本地�
 
 ![scp3](https://github.com/CSWU-Challenge/CSWU-Challenge.github.io/raw/456adcbe6d05b9576220e23c53d853d46d8e5a4a/Achieve/imgs/scp3.png)
 
-当然你也可以选择使用其他的传输工具，如Filezilla。个人觉得Xshell+Xftp的集成化套餐更方便使用。
+当然你也可以选择使用其他的传输工具，如Filezilla。个人觉得Xshell+Xftp的集成化套装更方便使用。
 # 优雅的键入指令
 
 很遗憾优雅的键入指令在任何一门课程上都是学不到的，只有实践或者口耳相传才可以做到
