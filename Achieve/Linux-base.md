@@ -119,13 +119,64 @@ ServerFilePath为文件在服务器上的路径，TargetFilePath为存到本地�
 当然你也可以选择使用其他的传输工具，如Filezilla。个人觉得Xshell+Xftp的集成化套装更方便使用。
 
 # Linux中的权限
-*[@_@]: 待写
+&emsp;&emsp;上文提到了root这个字眼，所谓root，就是Linux系统中享有最高权限的用户（类似于Windows里的管理员）。Linux是一个权限意识很强的系统，许多需要修改系统文件、配置之类的操作，如果没有root权限，往往会抛出`Permission denied`的error，然后强行中断。比如下面这个`apt-get update`
+
+![permission_denied](https://img.zsaqwq.com/images/2022/03/11/permission1.png)
+
+&emsp;&emsp;Windows是一个很好的反面教材，相信绝大多数人都无时无刻不为莫名其妙爆满的C盘、以及神不知鬼不觉自动安装的流氓软件而烦恼。这种事情在Linux上基本不会发生，因为这些有"风险"的操作都需要先获得root权限才能进行。
+
+&emsp;&emsp;如果你的命令行前有"#"符号，那么你已经是root用户（一般自购的服务器默认是root用户），任何命令都会以最高权限执行。如果是“$”符号，则不是root用户。那么对于后者，怎样才能以root权限执行指令呢？首先，你要知道root密码。如果是自己安装Linux，安装时会让你设置密码；其他情况请向系统管理员要密码。获得密码后，只要在指令前加上`sudo`一词，回车后输入密码即可。
+
+![permission_ok](https://img.zsaqwq.com/images/2022/03/11/permission2.png)
+
+&emsp;&emsp;可以看到指令成功执行。
+
+&emsp;&emsp;有的同学可能觉得这比较麻烦，动不动就要输密码。那么我们可以选择直接切换到root用户。输入指令`su`，然后输入密码即可。
+
+![su](https://img.zsaqwq.com/images/2022/03/11/permission3.png)
+
+&emsp;&emsp;这里可能遇到`su: Authentication Failed`的error，这是因为切换root用户的密码不一定与用户密码一致。执行指令`su passwd root`，输入用户密码，然后重置root密码即可。
+
+&emsp;&emsp;
+**使用root用户进行操作一定程度上破坏了Linux系统的安全性，因为你的一切命令都会被执行，哪怕是修改系统文件这样的高风险行为。如果你不清楚你的行为将产生的后果的话，有时这将是非常致命的。因此不建议初学者使用这种方式，还是老老实实的用sudo吧**
 # Linux基本命令 
 *[^_^]: 这部分内容大家一起补充哈  
 ## 转移当前位置
 
+&emsp;&emsp;用过Windows的cmd的同学应该知道`cd`这个命令，当我们使用cmd终端时，常常需要cd到某个目录进行操作。在日常使用中，我们也经常会打开一个又一个目录来查找某个文件。然而在一个终端中，我们并不能同时打开多个目录，它更像是从一个目录"走"到另一个目录。如果在命令中直接输入一个文件的名字，而没有指明路径，那就默认指当前所在目录下的这个文件（如果该文件存在的话）。那么如何转移当前所在目录呢？和cmd一样，使用命令`cd path`即可，path即是你要去的目录的路径。如图，我从目录`~/d1`转移到了`~/d2`，"$"前面会显示当前位置。
+
+![cd1](https://img.zsaqwq.com/images/2022/03/11/cd1.png)
+
+### 几个特殊位置
+
+&emsp;&emsp;下面列出了几个特殊目录的缩写：
+- 当前目录：`.`
+- 上一级目录：`..`
+- 上一次所在的目录：`-`
+- 家目录：`~`
+- 根目录: `/`
+
+&emsp;&emsp;例如，当我们想去家目录时，只需`cd ~`即可。想回退到上一级目录，则`cd ..`。
+
+&emsp;&emsp;这里所谓的家目录(home)，就是用户目录，存放我们平时用的文件，类似于D盘。根目录主要存放系统文件，类似于C盘。
 ## 文件操作
 
+下面列出了几个常用的文件操作命令。
+- 查看当前目录文件：`ls`
+
+![ls](https://img.zsaqwq.com/images/2022/03/11/ls.png)
+
+- 拷贝文件/目录：`cp RawFilePath TargetFilePath` 如果拷贝目录，则在`cp`后加上参数`-rf`。另外TargetFilePath可以直接指定新文件的名字。
+
+![cp](https://img.zsaqwq.com/images/2022/03/11/cp.png)
+
+- 移动/重命名文件(目录)：`mv RawFilePath TargetFilePath` 如果移动目录，在`mv`后加参数`-rf`。同样，TargetFilePath可以直接指定移动后文件的名字，如果你不移动位置，那么就相当于只是单纯的重命名。
+
+![mv](https://img.zsaqwq.com/images/2022/03/11/mv.png)
+
+- 删除文件/目录：`rm FilePath`。如果是目录，在`rm`后加上参数`-rf`。
+
+![rm](https://img.zsaqwq.com/images/2022/03/11/rm.png)
 ## 下载文件
 
 ## 安装软件
