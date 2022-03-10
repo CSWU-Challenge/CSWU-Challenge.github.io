@@ -6,7 +6,7 @@
 
 - [hrlee](http://hrlee.cn/)
 - [TideDra](https://github.com/TideDra)
-- [SHUN](https://github.com/zsa2001)
+- [SHUN](https://zsaqwq.com/)
 - [JohnG-mit](https://JohnG-mit.github.io)
 - [采庶子](https://github.com/Gfssfa)
 
