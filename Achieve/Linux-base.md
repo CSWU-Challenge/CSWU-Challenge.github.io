@@ -1,4 +1,7 @@
-[TOC]
+---
+layout: default
+---
+
 # 导言
 
 &emsp;&emsp;在超算竞赛中，我们主要以Linux为工作环境。原因有三：
