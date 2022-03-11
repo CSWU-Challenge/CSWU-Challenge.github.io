@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Linux基础
+title: Linux基础教程
+priority: 0.1
 ---
 
 # 导言
