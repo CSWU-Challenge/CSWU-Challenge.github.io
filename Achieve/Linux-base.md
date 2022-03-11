@@ -131,7 +131,7 @@ ServerFilePath为文件在服务器上的路径，TargetFilePath为存到本地�
 
 &emsp;&emsp;可以看到指令成功执行。
 
-&emsp;&emsp;有的同学可能觉得这比较麻烦，动不动就要输密码。那么我们可以选择直接切换到root用户。输入指令`su`，然后输入密码即可。当看到提示符由`$`变为下图中的`#`时，就说明已经成功切换到root用户了。
+&emsp;&emsp;有的同学可能觉得这比较麻烦，动不动就要输密码。那么我们可以选择直接切换到root用户。输入指令`su`，然后输入密码即可。当看到提示符由`$`变为下图中的`#`时（笔者的终端比较有个性，这里没有显示"$"），就说明已经成功切换到root用户了。
 
 ![su](https://img.zsaqwq.com/images/2022/03/11/permission3.png)
 
@@ -140,7 +140,7 @@ ServerFilePath为文件在服务器上的路径，TargetFilePath为存到本地�
 &emsp;&emsp;
 **使用root用户进行操作一定程度上破坏了Linux系统的安全性，因为你的一切命令都会被执行，哪怕是修改系统文件这样的高风险行为。如果你不清楚你的行为将产生的后果的话，有时这将是非常致命的。因此不建议初学者使用这种方式，还是老老实实的用sudo吧。**
 
-&emsp;&emsp;然而，在初赛中，为了避免污染集群原有环境致使影响其他用户的使用，我们只能以普通用户的身份进行各种操作。因此，如何在无root/无sudo权限的条件下达成我们的目标同样非常重要。盲目地使用sudo或者切换为root用户实际上是一种非常不负责任的行为，因为你可能并不知道问题究竟出在哪里。你只是看到了`Permission denied`，或其他引起你想要使用root权限的原因。使用sudo或是切换为root用户也许确实解决了你目前遇到的问题，但如果你对root权限下采取的行为并不充分了解，往往会为你未来的某些操作带来极大的隐患。***我们需要对root怀有敬畏之心，能力越大，责任越大。***当你在学校集群上尝试使用sudo或是切换为su用户时，会弹出以下提示：
+&emsp;&emsp;然而，在初赛中，为了避免污染集群原有环境致使影响其他用户的使用，我们只能以普通用户的身份进行各种操作。因此，如何在无root/无sudo权限的条件下达成我们的目标同样非常重要。盲目地使用sudo或者切换为root用户实际上是一种非常不负责任的行为，因为你可能并不知道问题究竟出在哪里。你只是看到了`Permission denied`，或其他引起你想要使用root权限的原因。使用sudo或是切换为root用户可能确实解决了你目前遇到的问题，但如果你对root权限下采取的行为并不充分了解，往往会为你未来的某些操作带来极大的隐患。***我们需要对root怀有敬畏之心，能力越大，责任越大。***当你在学校集群上尝试使用sudo或是切换为su用户时，会弹出以下提示：
 > We trust you have received the usual lecture from the local System
 > Administrator. It usually boils down to these three things:  
 >    &emsp;&emsp;#1) Respect the privacy of others.  
@@ -149,7 +149,7 @@ ServerFilePath为文件在服务器上的路径，TargetFilePath为存到本地�
 
 希望你能够牢记在心。
 
-# 常用命令教学 
+# 常用命令汇总 
 在初赛服务器上使用
 
 ```
@@ -274,6 +274,19 @@ ps -ef | grep xhpl
 ### rm
 删除某个文件
 
+<<<<<<< HEAD
+# Linux基本命令详解 
+*[^_^]: 这部分内容大家一起补充哈  
+## 写在前面
+
+&emsp;&emsp;Linux中的命令非常多，不要死记硬背。记住，绝大部分命令都是英文缩写，例如`rm`就是remove的缩写，`mv`就是move的缩写。只要知道英文意思，记住命令不是难事。知道了命令的名字，我们就可以在名字后面加上参数`--help`来查看帮助文档，从而了解命令的具体用法。
+
+![help](https://img.zsaqwq.com/images/2022/03/11/help.png)
+
+&emsp;&emsp;总之，只要英语过四级，你就已经成功了一大半（
+
+&emsp;&emsp;重要的事情说三遍：**多看文档！多看文档！多看文档！**
+=======
 ## alias：偷懒小妙招
 &emsp;&emsp;
 `alias`指令可以将冗长的指令字符串替换为自定义的任意字符串。它的常规用法是在`~/.bashrc`文件中声明以起到永久修改的效果。具体用法请看一个栗子。假如下图是你家目录下bashrc文件原有的模样（实际可能会有所区别）。
@@ -295,6 +308,7 @@ ps -ef | grep xhpl
 是不是效果很显著！上文中提到的`deact`, `ll`指令实际上也是通过这种方法设置的。
 `deact`实际上是将conda中的`conda deactivate`作了简化，而`ll`实际上是将`ls -l`做了简化，当然也可能是集成在高级系统中啦。
 
+>>>>>>> 6618de972bd0f1e7decec54b9125b9054e35833c
 ## 切换当前目录
 
 &emsp;&emsp;用过Windows的cmd的同学应该知道`cd`这个命令，当我们使用cmd终端时，常常需要cd到某个目录进行操作。在日常使用中，我们也经常会打开一个又一个目录来查找某个文件。然而在一个终端中，我们并不能同时打开多个目录，它更像是从一个目录"走"到另一个目录。如果在命令中直接输入一个文件的名字，而没有指明路径，那就默认指当前所在目录下的这个文件（如果该文件存在的话）。那么如何转移当前所在目录呢？和cmd一样，使用命令`cd path`即可，path即是你要去的目录的路径。如图，我从目录`~/d1`转移到了`~/d2`，"$"前面会显示当前位置。
@@ -332,13 +346,54 @@ ps -ef | grep xhpl
 
 ![rm](https://img.zsaqwq.com/images/2022/03/11/rm.png)
 
-- 查看文件内容：`cat FilePath`将所有文件内容打印到屏幕。`tail FilePath`打印文件尾部内容。当然也可以使用编辑器打开文件来查看。一般linux系统自带vi或vim，可以用`vi FilePath`或`vim FilePath`打开文件。关于vi/vim的具体用法请见后文。
+- 查看文件内容：`cat FilePath`将文件所有内容打印到屏幕。`tail FilePath`打印文件尾部内容。当然也可以使用编辑器打开文件来查看。一般linux系统自带vi或vim，可以用`vi FilePath`或`vim FilePath`打开文件。关于vi/vim的具体用法请见后文。
 
-<!--
+- 打包文件/目录为tar：`tar -cf ArchiveName.tar FileName`,其中`ArchiveName.tar`是打包后的文件名，FileName是要打包的文件或目录。FileName可以是多个，用空格隔开就行。
+
+![tar1](https://img.zsaqwq.com/images/2022/03/11/tar1.png)
+
+&emsp;&emsp;解释一下命令中的参数。`-c`代表create一个新的归档（Linux中的（压缩）包称为归档），`-f`表示后面接的是打包后或者要解压的file名。一般使用tar命令时，`-f`是必须有的，并且要写在最右边。同时使用多个参数只需把他们写在一起，就像上面示例那样。
+
+- 解包：`tar -xf ArchiveName`，此命令将`ArchiveName`解包至当前目录。参数x表示extract。
+
+![tar2](https://img.zsaqwq.com/images/2022/03/11/tar2.png)
+
+- 打包并压缩：`tar -acvf ArchiveName FileName`。参数`-a`表示系统根据ArchiveName的后缀自动决定压缩包的类型。你也可以自己指定压缩类型，例如你要压缩为一个tat.gz的包，只需将`-a`换为`-z`，那么即使ArchiveName不是以tar.gz为后缀，系统也会将其压缩为tar.gz包。因为在Linux系统中，后缀往往起一个标识作用，并不能决定文件真正的类型。参数`-v`表示将包里的文件打印到屏幕上。在上面提到的tar命令中，你都可以加入`-v`来让屏幕输出包里的文件。
+
+![tar3](https://img.zsaqwq.com/images/2022/03/11/tar3.png)
+- 查看包内文件：`tar -tvf ArchiveName`
+
+![tar4](https://img.zsaqwq.com/images/2022/03/11/tar4.png)
+
+**关于tar命令的具体使用，请输入`tar --help`来查看帮助文档**
+
 ## 下载文件
 
-## 安装软件
+&emsp;&emsp;在Linux中有两个常用的下载工具：wget和curl
 
+&emsp;&emsp;若使用wget，输入命令`wget -O FileName URL`，URL是下载链接，FileName是下载后的文件名。可以在FileName中指定保存路径。如果不写`-O FileName`，则以默认文件名下载到当前目录。
+
+![wget](https://img.zsaqwq.com/images/2022/03/11/wget.png)
+
+&emsp;&emsp;curl用法类似：`curl -o FileName URL`，注意这里是小写o。
+
+![wget](https://img.zsaqwq.com/images/2022/03/11/curl.png)
+
+
+## 软件管理
+
+&emsp;&emsp;Linux使用包管理器来管理软件（类似于360应用中心？hhh）。在Ubuntu中我们主要使用apt和apt-get来管理软件。apt是apt-get的升级版，两者共存于Ubuntu中，都可以管理系统中的软件。其他的包管理器还有yum、dpkg等。下面简单介绍apt/apt-get和yum的用法，其余包管理器在基础操作上大同小异，请自行百度。
+
+### 安装软件
+
+`sudo apt install AppName`或`sudo yum install AppName`
+
+### 卸载软件
+````
+sudo apt purge AppName \\卸载软件及其配置文件和依赖软件包
+sudo apt clean \\清理所有软件的安装包
+````
+<!--
 ## 设置环境变量
 
 ## 系统监控
