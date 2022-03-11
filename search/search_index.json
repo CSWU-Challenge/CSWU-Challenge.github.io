@@ -1,9 +1,8 @@
 ---
 layout: null
 ---
-{% assign URL = "" %}
 {
-    "config":{"lang":["zh-cn"],"prebuild_index":false,"separator":"[\\s\\-]+"},
+    "config":{"lang":["zh-CN"],"prebuild_index":false,"separator":"[\\s\\-]+"},
     "docs":
     [
         {% for page in site.pages %}
@@ -12,7 +11,7 @@ layout: null
         {% endif %}
         {% assign added = false %}
         {
-            "location": "{{ page.path }}", 
+            "location": "{{ page.url }}", 
             "text": "{{ page.content | strip_html | strip_newlines | slugify: 'ascii' | replace: '-', ' ' }}", 
             "title": "{{ page.title }}"
         }
@@ -25,7 +24,7 @@ layout: null
         {% endif %}
         {% assign added = false %}
         {
-            "location": "{{ post.path }}", 
+            "location": "{{ post.url }}", 
             "text": "{{ post.content | strip_html | strip_newlines | slugify: 'ascii' | replace: '-',' ' }}", 
             "title": "{{ post.title }}"
         }
@@ -38,7 +37,7 @@ layout: null
         {% endif %}
         {% assign added = false %}
         {
-            "location": "{{ wiki.path }}", 
+            "location": "{{ wiki.url }}", 
             "text": "{{ wiki.content | strip_html | strip_newlines | slugify: 'ascii' | replace: '-',' ' }}", 
             "title": "{{ wiki.title }}"
         }

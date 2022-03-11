@@ -75,7 +75,7 @@ collections:
 # Defaults
 defaults:
   - scope:
-      path: "_wiki"
+      path: "wiki"
       type: "wiki"
     values:
       layout: page
