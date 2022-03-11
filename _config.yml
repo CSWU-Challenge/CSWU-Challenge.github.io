@@ -17,7 +17,7 @@ encoding: utf-8
 
 title: 东南大学超算平台
 email: 
-repository: SEU HPC
+repository: CSWU-Challenge/CSWU-Challenge.github.io
 author: CSWU-Challenge
 description: > # this means to ignore newlines until "baseurl:"
     饮水思源，积健为雄
@@ -31,7 +31,7 @@ url: "https://cswu-challenge.github.io/" # the base hostname & protocol for your
 # Social (First three Required)
 repo: "https://github.com/CSWU-Challenge/CSWU-Challenge.github.io" # the repo of web source code 
 github_user: "CSWU-Challenge"
-github_repo: "CSWU-Challenge.github.io"
+github_repo: ""
 
 # Optional
 twitter: 

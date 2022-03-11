@@ -1,6 +1,6 @@
 ---
 layout: page
-title: SEU-HPC
+title: 东南大学超算平台用户手册
 permalink: /
 ---
 
