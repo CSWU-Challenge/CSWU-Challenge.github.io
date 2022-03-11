@@ -140,14 +140,14 @@ ServerFilePath为文件在服务器上的路径，TargetFilePath为存到本地�
 &emsp;&emsp;
 **使用root用户进行操作一定程度上破坏了Linux系统的安全性，因为你的一切命令都会被执行，哪怕是修改系统文件这样的高风险行为。如果你不清楚你的行为将产生的后果的话，有时这将是非常致命的。因此不建议初学者使用这种方式，还是老老实实的用sudo吧。**
 
-&emsp;&emsp;然而，在初赛中，为了避免污染集群原有环境致使影响其他用户的使用，我们只能以普通用户的身份进行各种操作。因此，如何在无root/无sudo权限的条件下达成我们的目标同样非常重要。盲目地使用sudo或者切换为root用户实际上是一种非常不负责任的行为，因为你可能并不知道问题究竟出在哪里。你只是看到了`Permission denied`，或其他引起你想要使用root权限的原因。使用sudo或是切换为root用户可能确实解决了你目前遇到的问题，但如果你对root权限下采取的行为并不充分了解，往往会为你未来的某些操作带来极大的隐患。***我们需要对root怀有敬畏之心，能力越大，责任越大。***当你在学校集群上尝试使用sudo或是切换为su用户时，会弹出以下提示：
+&emsp;&emsp;然而，在初赛中，为了避免污染集群原有环境致使影响其他用户的使用，我们只能以普通用户的身份进行各种操作。因此，如何在无root/无sudo权限的条件下达成我们的目标同样非常重要。盲目地使用sudo或者切换为root用户实际上是一种非常不负责任的行为，因为你可能并不知道问题究竟出在哪里。你只是看到了`Permission denied`，或其他引起你想要使用root权限的原因。使用sudo或是切换为root用户也许确实解决了你目前遇到的问题，但如果你对root权限下采取的行为并不充分了解，往往会为你未来的某些操作带来极大的隐患。***我们需要对root怀有敬畏之心，能力越大，责任越大。***当你在学校集群上尝试使用sudo或是切换为su用户时，会弹出以下提示：
 > We trust you have received the usual lecture from the local System
 > Administrator. It usually boils down to these three things:  
 >    &emsp;&emsp;#1) Respect the privacy of others.  
 >    &emsp;&emsp;#2) Think before you type.  
 >    &emsp;&emsp;#3) With great power comes great responsibility.  
 
-希望你能够牢记在心。  
+希望你能够牢记在心。
 
 # 常用命令教学 
 在初赛服务器上使用
@@ -273,6 +273,27 @@ ps -ef | grep xhpl
 
 ### rm
 删除某个文件
+
+## alias：偷懒小妙招
+&emsp;&emsp;
+`alias`指令可以将冗长的指令字符串替换为自定义的任意字符串。它的常规用法是在`~/.bashrc`文件中声明以起到永久修改的效果。具体用法请看一个栗子。假如下图是你家目录下bashrc文件原有的模样（实际可能会有所区别）。
+
+![bashrc_origin](/Achieve/imgs/bashrc.png#pic_center)
+
+当你在使用普通的grep指令时，查找到的对应字符串颜色并不会改变，比如这样（先别管指令的具体含义）：
+
+![grep_origin](/Achieve/imgs/grep_origin.png#pic_center)
+
+现在我们通过`vim ~/.bashrc`添加一条指令：
+
+![](/Achieve/imgs/bashrc_after.png#pic_center)
+
+执行`source ~/.bashrc`或`. ~/.bashrc`后再次查找：
+
+![](/Achieve/imgs/grep_after.png#pic_center)
+
+是不是效果很显著！上文中提到的`deact`, `ll`指令实际上也是通过这种方法设置的。
+`deact`实际上是将conda中的`conda deactivate`作了简化，而`ll`实际上是将`ls -l`做了简化，当然也可能是集成在高级系统中啦。
 
 ## 切换当前目录
 
