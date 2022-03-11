@@ -1,5 +1,5 @@
 ---
-title: 贡献者
+title: Contributors-贡献者
 permalink: /contributor/
 ---
 # 贡献者
