@@ -1,3 +1,7 @@
+---
+title: 贡献者
+permalink: /contributor/
+---
 # 贡献者
 
 *"眼底龙湖水，胸中黄河月"*

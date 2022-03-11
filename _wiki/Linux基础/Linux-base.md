@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: page
+title: Linux基础
 ---
 
 # 导言
