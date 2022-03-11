@@ -1,3 +1,7 @@
+---
+title: High Lights
+permalink: /high-lights/
+---
 # High-Ligths
 
 - ASC 20-21 First Prize
