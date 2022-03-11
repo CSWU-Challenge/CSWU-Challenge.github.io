@@ -131,14 +131,23 @@ ServerFilePath为文件在服务器上的路径，TargetFilePath为存到本地�
 
 &emsp;&emsp;可以看到指令成功执行。
 
-&emsp;&emsp;有的同学可能觉得这比较麻烦，动不动就要输密码。那么我们可以选择直接切换到root用户。输入指令`su`，然后输入密码即可。
+&emsp;&emsp;有的同学可能觉得这比较麻烦，动不动就要输密码。那么我们可以选择直接切换到root用户。输入指令`su`，然后输入密码即可。当看到提示符由`$`变为下图中的`#`时，就说明已经成功切换到root用户了。
 
 ![su](https://img.zsaqwq.com/images/2022/03/11/permission3.png)
 
 &emsp;&emsp;这里可能遇到`su: Authentication Failed`的error，这是因为切换root用户的密码不一定与用户密码一致。执行指令`su passwd root`，输入用户密码，然后重置root密码即可。
 
 &emsp;&emsp;
-**使用root用户进行操作一定程度上破坏了Linux系统的安全性，因为你的一切命令都会被执行，哪怕是修改系统文件这样的高风险行为。如果你不清楚你的行为将产生的后果的话，有时这将是非常致命的。因此不建议初学者使用这种方式，还是老老实实的用sudo吧**
+**使用root用户进行操作一定程度上破坏了Linux系统的安全性，因为你的一切命令都会被执行，哪怕是修改系统文件这样的高风险行为。如果你不清楚你的行为将产生的后果的话，有时这将是非常致命的。因此不建议初学者使用这种方式，还是老老实实的用sudo吧。**
+
+&emsp;&emsp;然而，在初赛中，为了避免污染集群原有环境致使影响其他用户的使用，我们只能以普通用户的身份进行各种操作。因此，如何在无root/无sudo权限的条件下达成我们的目标同样非常重要。盲目地使用sudo或者切换为root用户实际上是一种非常不负责任的行为，因为你可能并不知道问题究竟出在哪里。你只是看到了`Permission denied`，或其他引起你想要使用root权限的原因。使用sudo或是切换为root用户可能确实解决了你目前遇到的问题，但如果你对root权限下采取的行为并不充分了解，往往会为你未来的某些操作带来极大的隐患。***我们需要对root怀有敬畏之心，能力越大，责任越大。***当你在学校集群上尝试使用sudo或是切换为su用户时，会弹出以下提示：
+> We trust you have received the usual lecture from the local System
+> Administrator. It usually boils down to these three things:  
+>    &emsp;&emsp;#1) Respect the privacy of others.  
+>    &emsp;&emsp;#2) Think before you type.  
+>    &emsp;&emsp;#3) With great power comes great responsibility.  
+
+希望你能够牢记在心。  
 
 # 常用命令教学 
 在初赛服务器上使用
@@ -149,7 +158,7 @@ history | awk '{print $2}' | sort | uniq -c | sort -k1,1nr | head -15
 
 ## 从命令历史说起
 
-查看到了最常用的15行命令
+上条指令显示了初赛阶段最常用的15行命令：
 ```
 (base) [asc02@login01 ~]$ history | awk '{print $2}' | sort | uniq -c | sort -k1,1nr | head -15
     208 ls
@@ -265,7 +274,7 @@ ps -ef | grep xhpl
 ### rm
 删除某个文件
 
-## 转移当前位置
+## 切换当前目录
 
 &emsp;&emsp;用过Windows的cmd的同学应该知道`cd`这个命令，当我们使用cmd终端时，常常需要cd到某个目录进行操作。在日常使用中，我们也经常会打开一个又一个目录来查找某个文件。然而在一个终端中，我们并不能同时打开多个目录，它更像是从一个目录"走"到另一个目录。如果在命令中直接输入一个文件的名字，而没有指明路径，那就默认指当前所在目录下的这个文件（如果该文件存在的话）。那么如何转移当前所在目录呢？和cmd一样，使用命令`cd path`即可，path即是你要去的目录的路径。如图，我从目录`~/d1`转移到了`~/d2`，"$"前面会显示当前位置。
 
