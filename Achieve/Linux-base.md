@@ -285,26 +285,6 @@ ps -ef | grep xhpl
 &emsp;&emsp;总之，只要英语过四级，你就已经成功了一大半（
 
 &emsp;&emsp;重要的事情说三遍：**多看文档！多看文档！多看文档！**
-## alias：偷懒小妙招
-&emsp;&emsp;
-`alias`指令可以将冗长的指令字符串替换为自定义的任意字符串。它的常规用法是在`~/.bashrc`文件中声明以起到永久修改的效果。具体用法请看一个栗子。假如下图是你家目录下bashrc文件原有的模样（实际可能会有所区别）。
-
-![bashrc_origin](https://img.zsaqwq.com/images/2022/03/11/bashrc.png#pic_center)
-
-当你在使用普通的grep指令时，查找到的对应字符串颜色并不会改变，比如这样（先别管指令的具体含义）：
-
-![grep_origin](https://img.zsaqwq.com/images/2022/03/11/grep_origin.png#pic_center)
-
-现在我们通过`vim ~/.bashrc`添加一条指令：
-
-![](https://img.zsaqwq.com/images/2022/03/11/bashrc_after.png#pic_center)
-
-执行`source ~/.bashrc`或`. ~/.bashrc`后再次查找：
-
-![](https://img.zsaqwq.com/images/2022/03/11/grep_after.png#pic_center)
-
-是不是效果很显著！上文中提到的`deact`, `ll`指令实际上也是通过这种方法设置的。
-`deact`实际上是将conda中的`conda deactivate`作了简化，而`ll`实际上是将`ls -l`做了简化，当然也可能是集成在高级系统中啦。
 
 ## 切换当前目录
 
@@ -434,8 +414,26 @@ vimtutor
 
 // TODO Anaconda这块可以独立拎出来，应该不是Linux基础。哪位有缘人把他拎出来?
 -->
+## alias：偷懒小妙招
+&emsp;&emsp;
+`alias`指令可以将冗长的指令字符串替换为自定义的任意字符串。它的常规用法是在`~/.bashrc`文件中声明以起到永久修改的效果。具体用法请看一个栗子。假如下图是你家目录下bashrc文件原有的模样（实际可能会有所区别）。
 
+![bashrc_origin](https://img.zsaqwq.com/images/2022/03/11/bashrc.png#pic_center)
 
+当你在使用普通的grep指令时，查找到的对应字符串颜色并不会改变，比如这样（先别管指令的具体含义）：
+
+![grep_origin](https://img.zsaqwq.com/images/2022/03/11/grep_origin.png#pic_center)
+
+现在我们通过`vim ~/.bashrc`添加一条指令：
+
+![](https://img.zsaqwq.com/images/2022/03/11/bashrc_after.png#pic_center)
+
+执行`source ~/.bashrc`或`. ~/.bashrc`后再次查找：
+
+![](https://img.zsaqwq.com/images/2022/03/11/grep_after.png#pic_center)
+
+是不是效果很显著！上文中提到的`deact`, `ll`指令实际上也是通过这种方法设置的。
+`deact`实际上是将conda中的`conda deactivate`作了简化，而`ll`实际上是将`ls -l`做了简化，当然也可能是集成在高级系统中啦。
 # 优雅的键入指令
 
 很遗憾优雅的键入指令在任何一门课程上都是学不到的，只有实践或者口耳相传才可以做到
