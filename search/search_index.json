@@ -12,7 +12,7 @@ layout: null
         {% endif %}
         {% assign added = false %}
         {
-            "location": "{{ page.url | absolute_url | remove_first: 'https://cswu-challenge.github.io' }}", 
+            "location": "{{ page.path }}", 
             "text": "{{ page.content | strip_html | strip_newlines | slugify: 'ascii' | replace: '-', ' ' }}", 
             "title": "{{ page.title }}"
         }
@@ -25,7 +25,7 @@ layout: null
         {% endif %}
         {% assign added = false %}
         {
-            "location": "{{ post.url | absolute_url | remove_first: 'https://cswu-challenge.github.io' }}", 
+            "location": "{{ post.path }}", 
             "text": "{{ post.content | strip_html | strip_newlines | slugify: 'ascii' | replace: '-',' ' }}", 
             "title": "{{ post.title }}"
         }
@@ -38,7 +38,7 @@ layout: null
         {% endif %}
         {% assign added = false %}
         {
-            "location": "{{ wiki.url | absolute_url | remove_first: 'https://cswu-challenge.github.io' }}", 
+            "location": "{{ wiki.path }}", 
             "text": "{{ wiki.content | strip_html | strip_newlines | slugify: 'ascii' | replace: '-',' ' }}", 
             "title": "{{ wiki.title }}"
         }
