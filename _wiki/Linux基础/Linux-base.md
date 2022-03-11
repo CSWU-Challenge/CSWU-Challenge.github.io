@@ -275,7 +275,6 @@ ps -ef | grep xhpl
 ### rm
 删除某个文件
 
-<<<<<<< HEAD
 # Linux基本命令详解 
 *[^_^]: 这部分内容大家一起补充哈  
 ## 写在前面
@@ -287,29 +286,7 @@ ps -ef | grep xhpl
 &emsp;&emsp;总之，只要英语过四级，你就已经成功了一大半（
 
 &emsp;&emsp;重要的事情说三遍：**多看文档！多看文档！多看文档！**
-=======
-## alias：偷懒小妙招
-&emsp;&emsp;
-`alias`指令可以将冗长的指令字符串替换为自定义的任意字符串。它的常规用法是在`~/.bashrc`文件中声明以起到永久修改的效果。具体用法请看一个栗子。假如下图是你家目录下bashrc文件原有的模样（实际可能会有所区别）。
 
-![bashrc_origin](https://img.zsaqwq.com/images/2022/03/11/bashrc.png#pic_center)
-
-当你在使用普通的grep指令时，查找到的对应字符串颜色并不会改变，比如这样（先别管指令的具体含义）：
-
-![grep_origin](https://img.zsaqwq.com/images/2022/03/11/grep_origin.png#pic_center)
-
-现在我们通过`vim ~/.bashrc`添加一条指令：
-
-![](https://img.zsaqwq.com/images/2022/03/11/bashrc_after.png#pic_center)
-
-执行`source ~/.bashrc`或`. ~/.bashrc`后再次查找：
-
-![](https://img.zsaqwq.com/images/2022/03/11/grep_after.png#pic_center)
-
-是不是效果很显著！上文中提到的`deact`, `ll`指令实际上也是通过这种方法设置的。
-`deact`实际上是将conda中的`conda deactivate`作了简化，而`ll`实际上是将`ls -l`做了简化，当然也可能是集成在高级系统中啦。
-
->>>>>>> 6618de972bd0f1e7decec54b9125b9054e35833c
 ## 切换当前目录
 
 &emsp;&emsp;用过Windows的cmd的同学应该知道`cd`这个命令，当我们使用cmd终端时，常常需要cd到某个目录进行操作。在日常使用中，我们也经常会打开一个又一个目录来查找某个文件。然而在一个终端中，我们并不能同时打开多个目录，它更像是从一个目录"走"到另一个目录。如果在命令中直接输入一个文件的名字，而没有指明路径，那就默认指当前所在目录下的这个文件（如果该文件存在的话）。那么如何转移当前所在目录呢？和cmd一样，使用命令`cd path`即可，path即是你要去的目录的路径。如图，我从目录`~/d1`转移到了`~/d2`，"$"前面会显示当前位置。
@@ -438,8 +415,26 @@ vimtutor
 
 // TODO Anaconda这块可以独立拎出来，应该不是Linux基础。哪位有缘人把他拎出来?
 -->
+# alias：偷懒小妙招
+&emsp;&emsp;
+`alias`指令可以将冗长的指令字符串替换为自定义的任意字符串。它的常规用法是在`~/.bashrc`文件中声明以起到永久修改的效果。具体用法请看一个栗子。假如下图是你家目录下bashrc文件原有的模样（实际可能会有所区别）。
 
+![bashrc_origin](https://img.zsaqwq.com/images/2022/03/11/bashrc.png#pic_center)
 
+当你在使用普通的grep指令时，查找到的对应字符串颜色并不会改变，比如这样（先别管指令的具体含义）：
+
+![grep_origin](https://img.zsaqwq.com/images/2022/03/11/grep_origin.png#pic_center)
+
+现在我们通过`vim ~/.bashrc`添加一条指令：
+
+![](https://img.zsaqwq.com/images/2022/03/11/bashrc_after.png#pic_center)
+
+执行`source ~/.bashrc`或`. ~/.bashrc`后再次查找：
+
+![](https://img.zsaqwq.com/images/2022/03/11/grep_after.png#pic_center)
+
+是不是效果很显著！上文中提到的`deact`, `ll`指令实际上也是通过这种方法设置的。
+`deact`实际上是将conda中的`conda deactivate`作了简化，而`ll`实际上是将`ls -l`做了简化，当然也可能是集成在高级系统中啦。
 # 优雅的键入指令
 
 很遗憾优雅的键入指令在任何一门课程上都是学不到的，只有实践或者口耳相传才可以做到
