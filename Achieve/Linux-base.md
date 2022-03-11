@@ -177,6 +177,8 @@ ServerFilePath为文件在服务器上的路径，TargetFilePath为存到本地�
 - 删除文件/目录：`rm FilePath`。如果是目录，在`rm`后加上参数`-rf`。
 
 ![rm](https://img.zsaqwq.com/images/2022/03/11/rm.png)
+
+- 查看文件内容：`cat FilePath`将所有文件内容打印到屏幕。`tail FilePath`打印文件尾部内容。当然也可以使用编辑器打开文件来查看。一般linux系统自带vi或vim，可以用`vi FilePath`或`vim FilePath`打开文件。关于vi/vim的具体用法请见后文。
 ## 下载文件
 
 ## 安装软件
@@ -194,6 +196,8 @@ ServerFilePath为文件在服务器上的路径，TargetFilePath为存到本地�
 ### 后台挂起程序
 
 # 从源码编译安装
+
+# 软链接与硬链接
 
 # Vim/Vi的基本使用
 ## 什么是vim?
