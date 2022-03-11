@@ -14,6 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 encoding: utf-8
+locale: zh-CN
 
 title: 东南大学超算平台
 email: 
