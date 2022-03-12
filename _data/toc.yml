@@ -1,5 +1,15 @@
-- title: "Tutorials"
-  url: "_wiki/tutorial"
-  children:
-    - title: Linux快速基础入门
-      url: "docs/tutorial#Linux快速基础入门"
+#pages
+- title: "About"
+  url: "about"
+- title: "Articles"
+  url: "archive"
+- title: "Contributors-贡献者"
+  url: "contributor"
+- title: "High Lights-高光时刻"
+  url: "high-lights"
+- title: "News"
+  url: "news"
+
+#wiki
+- title: "Linux基础教程"
+  url: "wiki/Linux基础/Linux-base.md"

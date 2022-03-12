@@ -1,7 +1,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="content-language" content="en">
+  <meta http-equiv="content-language" content="zh-CN">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,13 +15,14 @@
   <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"> -->
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ 'feed.xml' | prepend: site.baseurl | prepend: site.url }}">
   <meta name="lang:clipboard.copy" content="Copy to clipboard">      
   <meta name="lang:clipboard.copied" content="Copied to clipboard">
-  <meta name="lang:search.language" content="en">
-  <meta name="lang:search.pipeline.stopwords" content="True">
-  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.language" content="zh-CN">
+  <meta name="lang:search.pipeline.stopwords" content="false">
+  <meta name="lang:search.pipeline.trimmer" content="false">
   <meta name="lang:search.result.none" content="No matching documents">
   <meta name="lang:search.result.one" content="1 matching document">
   <meta name="lang:search.result.other" content="# matching documents">
