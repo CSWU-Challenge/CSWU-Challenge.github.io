@@ -78,7 +78,7 @@ template: overrides/main.html
 修改 ssh 配置`/etc/ssh/sshd_config`
 ```sudo vim /etc/ssh/sshd_config```
 将 PermitRootLogin 改为 yes
-```
+```bash
 #LoginGraceTime 2m
 PermitRootLogin yes
 #StrictModes yes
@@ -153,14 +153,14 @@ ServerFilePath为文件在服务器上的路径，TargetFilePath为存到本地�
 ## 常用命令汇总 
 在初赛服务器上使用
 
-```
+```bash
 history | awk '{print $2}' | sort | uniq -c | sort -k1,1nr | head -15
 ```
 
 ### 从命令历史说起
 
 上条指令显示了初赛阶段最常用的15行命令：
-```
+```bash
 (base) [asc02@login01 ~]$ history | awk '{print $2}' | sort | uniq -c | sort -k1,1nr | head -15
     208 ls
     155 cd
@@ -182,7 +182,7 @@ history | awk '{print $2}' | sort | uniq -c | sort -k1,1nr | head -15
 
 其中特别推荐先敲个
 
-```
+```bash
 vimtutor
 ```
 查看如何使用地表最强编辑器vim。
@@ -192,7 +192,7 @@ vimtutor
 #### 管线
 
 在查询的时候经常要连续的处理数据，这个时候就需要管线
-```
+```bash
 |
 ```
 指的是把左边的指令结果输入到右边。
@@ -201,12 +201,12 @@ vimtutor
 
 查看文件夹内容，一般笔者习惯敲
 
-```
+```bash
 ls -lt
 ```
 这样可以显示文件的数学并按修改时间排列。在一些高级系统里该指令被
 
-```
+```bash
 ll
 ```
 默认集成
@@ -235,7 +235,7 @@ vimtutor
 
 监视器，一般用来替代手工刷新，如
 
-```
+```bash
 watch -n 0.5 nvidia-smi
 ```
 
@@ -246,7 +246,7 @@ watch -n 0.5 nvidia-smi
 
 以后台挂起的形式运行某行指令，不会因为ssh terminal关闭而杀死进程, 如
 
-```
+```bash
 nohup python3 xxx.py > xxx.out &
 ```
 
@@ -264,7 +264,7 @@ nohup python3 xxx.py > xxx.out &
 
 #### ps
 也是查看进程运行情况，但是以PID排序，一般加上grep以查看想看的进程，如
-```
+```bash
 ps -ef | grep xhpl
 ```
 就是只看xhpl跑的怎么样
