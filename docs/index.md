@@ -1,5 +1,7 @@
 ---
 template: overrides/main.html
+hide:
+  - navigation
 ---
 
 # 东南大学超算团队

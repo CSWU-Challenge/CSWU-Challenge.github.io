@@ -72,13 +72,13 @@ theme:
       primary: teal
       accent: teal
       toggle:
-        icon: material/toggle-switch
+        icon: material/weather-sunny
         name: Switch to dark mode
     - scheme: slate
       primary: black
       accent: black
       toggle:
-        icon: material/toggle-switch-off-outline
+        icon: material/weather-night
         name: Switch to light mode
   font:
     text: Roboto
@@ -87,6 +87,19 @@ theme:
   icon:
     logo: logo
     repo: fontawesome/brands/github
+    admonition:
+      note: fontawesome/solid/sticky-note
+      abstract: fontawesome/solid/book
+      info: fontawesome/solid/info-circle
+      tip: fontawesome/solid/bullhorn
+      success: fontawesome/solid/check
+      question: fontawesome/solid/question-circle
+      warning: fontawesome/solid/exclamation-triangle
+      failure: fontawesome/solid/bomb
+      danger: fontawesome/solid/skull
+      bug: fontawesome/solid/robot
+      example: fontawesome/solid/flask
+      quote: fontawesome/solid/quote-left
 
 # Plugins
 plugins:
@@ -164,8 +177,14 @@ nav:
   - Home: index.md
   - Wiki:
     - Linux基础教程: wiki/Linux-base.md
-  - High Light: high-light.md
-  - Contirbutor: contributor.md
+  - High Light: page/high-light.md
+  - Contirbutor: page/contributor.md
+  - About: page/to-contributors.md
+
+
+
+
+
   #- Getting started:
   #  - Installation: getting-started.md
   #  - Creating your site: creating-your-site.md
