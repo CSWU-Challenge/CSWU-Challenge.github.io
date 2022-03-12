@@ -197,6 +197,49 @@ vimtutor
 ```
 指的是把左边的指令结果输入到右边。
 
+#### 重定向 
+linux命令重定向分为输入输出重定向，大部分输出重定向最常用。
+所谓重定向就是将系统默认的标准输入输出，比如说输出到错误信息和程序运行中打印出的信息这些一般都输出到终端，但是可以通过重定向的方式，输出到文件中。
+一般的输入重定向形式为：
+```
+command < filename
+```
+举个例子 用`wc -l`命令统计行数 
+```
+root@VM-4-11-ubuntu:~# wc -l << EOF
+> Welcome to
+> join SEU-HPC
+> have fun!
+> EOF
+3
+
+```
+
+一般的输出重定向形式为：
+```
+command > filename
+```
+">>" 表示追加，新的写入会追加在原文件内容后面，而> 会覆盖掉文件原来的内容
+有些系统文件，不好用vi/vim 更改时我们也会用用到重定向修改文件
+例如向file写入0
+```
+echo 0>file
+```
+
+更深入的话，输出输出重定向的原理是：
+linux 中有三个标准流： 0 通常是标准输入（STDIN），1 是标准输出（STDOUT），2 是标准错误输出（STDERR）
+通常对应键盘 显示屏 显示屏
+比如我们可以把标准错误输出2重定向到日志文件
+```
+ls -l /root/ 2>ls-error.log
+```
+也可以标准错误和标准输出 都输出到一个文件
+```
+ls -l /root/ >ls-error.log 2>&1
+```
+大家在操作系统实验课程中写个myshell时应该会再碰到，到时候会有更深入的理解捏
+
+
 #### ls
 
 查看文件夹内容，一般笔者习惯敲
@@ -275,27 +318,6 @@ ps -ef | grep xhpl
 #### rm
 删除某个文件
 
-### alias：偷懒小妙招
-&emsp;&emsp;
-`alias`指令可以将冗长的指令字符串替换为自定义的任意字符串。它的常规用法是在`~/.bashrc`文件中声明以起到永久修改的效果。具体用法请看一个栗子。假如下图是你家目录下bashrc文件原有的模样（实际可能会有所区别）。
-
-![bashrc_origin](https://img.zsaqwq.com/images/2022/03/11/bashrc.png#pic_center)
-
-当你在使用普通的grep指令时，查找到的对应字符串颜色并不会改变，比如这样（先别管指令的具体含义）：
-
-![grep_origin](https://img.zsaqwq.com/images/2022/03/11/grep_origin.png#pic_center)
-
-现在我们通过`vim ~/.bashrc`添加一条指令：
-
-![](https://img.zsaqwq.com/images/2022/03/11/bashrc_after.png#pic_center)
-
-执行`source ~/.bashrc`或`. ~/.bashrc`后再次查找：
-
-![](https://img.zsaqwq.com/images/2022/03/11/grep_after.png#pic_center)
-
-是不是效果很显著！上文中提到的`deact`, `ll`指令实际上也是通过这种方法设置的。
-`deact`实际上是将conda中的`conda deactivate`作了简化，而`ll`实际上是将`ls -l`做了简化，当然也可能是集成在高级系统中啦。
-
 ## Linux基本命令详解 
 
 ### 写在前面
@@ -317,11 +339,15 @@ ps -ef | grep xhpl
 #### 几个特殊位置
 
 &emsp;&emsp;下面列出了几个特殊目录的缩写：
-- 当前目录：`.`
-- 上一级目录：`..`
-- 上一次所在的目录：`-`
-- 家目录：`~`
-- 根目录: `/`
+* 当前目录：`.`
+
+* 上一级目录：`..`
+
+* 上一次所在的目录：`-`
+
+* 家目录：`~`
+
+* 根目录: `/`
 
 &emsp;&emsp;例如，当我们想去家目录时，只需`cd ~`即可。想回退到上一级目录，则`cd ..`。
 
@@ -392,23 +418,114 @@ ps -ef | grep xhpl
 sudo apt purge AppName \\卸载软件及其配置文件和依赖软件包
 sudo apt clean \\清理所有软件的安装包
 ````
-<!--
-## 设置环境变量
 
-## 系统监控
+或
 
-### 查看系统配置
+```sudo yum remove AppName```
+
+## 环境变量
+
+&emsp;&emsp;环境变量是一个很重要的概念。我们都知道程序中有局部变量、全局变量之分。操作系统本身就是一个大的程序，环境变量就是这个程序的全局变量，你可以在系统的任何地方访问到他。很多时候，程序的安装、运行等都需要用户给定参数，而环境变量就是我们常用的传递参数的办法。
+
+### 创建临时环境变量
+
+&emsp;&emsp;在终端直接输入`export MyVar=1`，你就创建了一个名为MyVar，值为1的环境变量。使用`echo $MyVar`打印环境变量。
+
+![var1](https://img.zsaqwq.com/images/2022/03/12/var1.png)
+
+&emsp;&emsp;实际上，`export`不是必须的，你也可以直接输入`MyVar=1`。另外，环境变量的值也可以是字符串。
+
+![var2](https://img.zsaqwq.com/images/2022/03/12/var2.png)
+
+### 删除临时环境变量
+
+&emsp;&emsp;删除MyVar这个环境变量，只需输入`unset MyVar`即可。
+
+![var3](https://img.zsaqwq.com/images/2022/03/12/var3.png)
+
+**注意，在终端直接export的环境变量只存在于当前终端。若重新登陆服务器或者切换至其他终端，则改环境变量将不复存在。**
+### 创建永久环境变量
+
+&emsp;&emsp;使用vim/vi打开`~/.bashrc`，将`export MyVar=1`写入末尾后保存，然后输入`source ~/.bashrc`刷新终端，即可使其成为永久环境变量。
+
+### 删除永久环境变量
+
+&emsp;&emsp;将`export MyVar=1`从`.bashrc`中删去，刷新终端即可。
+
+## 进程管理
 
 ### 查看、杀死进程
 
-### 查看显卡状态
+&emsp;&emsp;你可以随时终止Linux系统中任何一个正在运行的程序，或者说进程。
 
-### 后台挂起程序
+&emsp;&emsp;输入`ps -aux`查看所有进程。
 
-# 从源码编译安装
+![ps1](https://img.zsaqwq.com/images/2022/03/12/ps1.png)
 
-# 软链接与硬链接
--->
+&emsp;&emsp;你可以看到所有进程的进程号(PID),CPU与内存使用率，状态，时间，以及开启这个进程的命令。
+
+&emsp;&emsp;输入`kill PID`，可以立即杀死进程号为PID的的进程。例如，`ps -aux`这个命令开启的进程的PID为95，则输入`kill 95`即可杀死该进程。
+
+## 后台挂起进程
+
+&emsp;&emsp;在超算竞赛中，我们跑一次程序经常要跑好几十分钟甚至几天。如果我们在终端中直接输入命令开启进程，那么关闭终端或者掉线都会终止进程，导致程序白跑.
+
+&emsp;&emsp;为了避免这种情况发生，我们经常使用nohup工具，将进程挂在后台，这样即使掉线或者关闭终端，都不会终止进程。使用方法非常简单，在命令前加上`nohup`，在末尾加上`&`，然后**两次回车**即可。
+
+&emsp;&emsp;举个例子，我们写一个名为test.sh的脚本，其作用是打印`hellow!world!`
+
+![nohup1](https://img.zsaqwq.com/images/2022/03/12/nohup1.png)
+
+&emsp;&emsp;直接运行脚本，可以看见屏幕输出了hellow!world!。
+
+![nohup2](https://img.zsaqwq.com/images/2022/03/12/nohup2.png)
+
+&emsp;&emsp;使用nohup将脚本挂在后台。
+
+![nohup3](https://img.zsaqwq.com/images/2022/03/12/nohup3.png)
+
+&emsp;&emsp;首先，系统会告诉我们脚本的进程号为121。下面一句话的意思是脚本的输出被保存在当前目录下的nohup.out里。
+
+![nohup4](https://img.zsaqwq.com/images/2022/03/12/nohup4.png)
+
+&emsp;&emsp;查看nohup.out，可以看见里面放着hellow!world!。
+
+![nohup5](https://img.zsaqwq.com/images/2022/03/12/nohup5.png)
+
+&emsp;&emsp;
+**注意：nohup.out会随着脚本的运行实时更新内容**
+
+&emsp;&emsp;你也可以用`>`来指定输出的文件名，输入`nohup zsh ./test.sh >output.txt &`，这样输出的文件名就不是`nohup.out`，而是`output.txt`。
+
+## 查看系统配置
+
+&emsp;&emsp;在超算竞赛中，我们测试程序、写proposal都需要知道系统的配置。下面给出查看主要硬件信息的命令。
+
+* 查看CPU：`cat /proc/cpuinfo`
+
+![cpu](https://img.zsaqwq.com/images/2022/03/13/cpu.png)
+
+* 查看内存使用情况：`free -m`，单位是mb。如果是`-g`，则单位为gb。
+
+![mem](https://img.zsaqwq.com/images/2022/03/13/mem.png)
+
+* 查看硬盘使用情况：`df -h`
+
+![disk](https://img.zsaqwq.com/images/2022/03/13/disk.png)
+
+* 查看内存条详细信息；`sudo dmidecode -t memory`
+
+![mem2](https://img.zsaqwq.com/images/2022/03/13/mem2.png)
+
+* 查看系统版本：`cat /etc/issue`
+
+![sys](https://img.zsaqwq.com/images/2022/03/13/sys.png)
+
+* 查看显卡信息：`nvidia-smi`
+
+![gpu](https://img.zsaqwq.com/images/2022/03/13/gpu.png)
+
+&emsp;&emsp;使用这个命令需要先安装nvidia显卡驱动。这个命令会给出显卡的详细情况，包括驱动版本、CUDA版本，显存使用情况，显卡使用率，功率等。我们测试程序时经常用到这个命令。输入`watch -n 0.1 nvidia-smi`可动态刷新信息。
 
 ## Vim/Vi的基本使用
 ### 什么是vim?
@@ -456,3 +573,24 @@ CentOS下，有一个很智能的功能，就是只输入一条历史命令的�
 - 搜索`history-search`
 - 删除前面的注释`#`号
 - 重新登录终端
+
+# alias：偷懒小妙招
+&emsp;&emsp;
+`alias`指令可以将冗长的指令字符串替换为自定义的任意字符串。它的常规用法是在`~/.bashrc`文件中声明以起到永久修改的效果。具体用法请看一个栗子。假如下图是你家目录下bashrc文件原有的模样（实际可能会有所区别）。
+
+![bashrc_origin](https://img.zsaqwq.com/images/2022/03/11/bashrc.png#pic_center)
+
+当你在使用普通的grep指令时，查找到的对应字符串颜色并不会改变，比如这样（先别管指令的具体含义）：
+
+![grep_origin](https://img.zsaqwq.com/images/2022/03/11/grep_origin.png#pic_center)
+
+现在我们通过`vim ~/.bashrc`添加一条指令：
+
+![](https://img.zsaqwq.com/images/2022/03/11/bashrc_after.png#pic_center)
+
+执行`source ~/.bashrc`或`. ~/.bashrc`后再次查找：
+
+![](https://img.zsaqwq.com/images/2022/03/11/grep_after.png#pic_center)
+
+是不是效果很显著！上文中提到的`deact`, `ll`指令实际上也是通过这种方法设置的。
+`deact`实际上是将conda中的`conda deactivate`作了简化，而`ll`实际上是将`ls -l`做了简化，当然也可能是集成在高级系统中啦。
