@@ -11,6 +11,7 @@ template: overrides/main.html
 &emsp;&emsp;本页面存储东南大学超算集群使用方法、SC竞赛入门教程、超算团队历年经验手册。
 
 1. [Linux基础教程](/wiki/Linux-base/)
+2. [conda&pip基础](/wiki/conda&pip_base.md)
 
 ## 其他链接
 
