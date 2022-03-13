@@ -177,7 +177,7 @@ nav:
   - Home: index.md
   - Wiki:
     - Linux基础教程: wiki/Linux-base.md
-    - wiki/conda&pip_base.md
+    - conda与pip基础: wiki/conda&pip_base.md
   - High Light: page/high-light.md
   - Contirbutor: page/contributor.md
   - About: page/to-contributors.md
