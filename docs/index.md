@@ -17,7 +17,7 @@ hide:
 
 ## 其他链接
 
-- [Download-健雄科协整理的竞赛手册](/docs/_static/竞赛手册之ASC超算.pdf)
+- [Download-健雄科协整理的竞赛手册](/_static/竞赛手册之ASC超算.pdf)
 - [High Lights-高光时刻](/high-light/)
 - [Contributors-贡献者](/contributor/)
 
