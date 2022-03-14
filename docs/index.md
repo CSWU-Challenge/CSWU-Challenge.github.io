@@ -6,7 +6,11 @@ hide:
 
 # 东南大学超算团队
 
+![GitHub contributors](https://img.shields.io/github/contributors/CSWU-Challenge/CSWU-Challenge.github.io?style=for-the-badge)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/CSWU-Challenge/CSWU-Challenge.github.io?style=for-the-badge)
+
 *"眼底龙湖水，胸中黄河月。"*
+
 
 ## 页面导航
 
