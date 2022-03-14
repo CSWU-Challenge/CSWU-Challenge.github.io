@@ -6,7 +6,7 @@ body:
       label: Contribution guidelines
       description: Please read the contribution guidelines before proceeding.
       options:
-        - label: I've read the [contribution guidelines](https://github.com/squidfunk/mkdocs-material/blob/master/CONTRIBUTING.md) and wholeheartedly agree
+        - label: I've read the [contribution guidelines](https://github.com/CSWU-Challenge/CSWU-Challenge.github.io/blob/master/CONTRIBUTION.md) and wholeheartedly agree
           required: true
   - type: checkboxes
     attributes:
@@ -44,16 +44,6 @@ body:
         1. ...
         2. ...
         3. ...
-    validations:
-      required: true
-  - type: textarea
-    attributes:
-      label: Package versions
-      description: Please provide all package versions, i.e. run the commands in backticks on a shell.
-      value: |-
-        - Python: `python --version`
-        - MkDocs: `mkdocs --version`
-        - Material: `pip show mkdocs-material | grep -E ^Version`
     validations:
       required: true
   - type: textarea
