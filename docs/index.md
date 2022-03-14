@@ -18,7 +18,8 @@ hide:
 
 1. [Linux基础教程](/wiki/Linux-base/)
 2. [conda与pip基础](/wiki/conda&pip_base/)
-
+3. [超算竞赛快速入门](/wiki/ASC-introduction.md)
+   
 ## 其他链接
 
 - [Download-健雄科协整理的竞赛手册](/download/竞赛手册之ASC超算.pdf)
