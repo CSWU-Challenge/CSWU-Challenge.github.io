@@ -16,9 +16,10 @@ hide:
 
 &emsp;&emsp;本页面存储东南大学超算集群使用方法、SC竞赛入门教程、超算团队历年经验手册。
 
-1. [Linux基础教程](/wiki/Linux-base/)
-2. [conda与pip基础](/wiki/conda&pip_base/)
-3. [超算竞赛快速入门](/wiki/ASC-introduction.md)
+1. [超算竞赛快速入门](/wiki/ASC-introduction/)
+2. [Linux基础教程](/wiki/Linux-base/)
+3. [conda与pip基础](/wiki/conda&pip_base/)
+
    
 ## 其他链接
 
