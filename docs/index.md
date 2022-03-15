@@ -19,7 +19,7 @@ hide:
 1. [超算竞赛快速入门](/wiki/ASC-introduction/)
 2. [Linux基础教程](/wiki/Linux-base/)
 3. [conda与pip基础](/wiki/conda&pip_base/)
-4. [如何写Proposal](wiki/Proposal-writing.)
+4. [如何写Proposal](wiki/Proposal-writing)
 
    
 ## 其他链接
