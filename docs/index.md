@@ -22,11 +22,17 @@ hide:
 4. [如何写Proposal](wiki/Proposal-writing)
 
    
-## 其他链接
+## 关于我们
 
-- [Download-健雄科协整理的竞赛手册](/download/竞赛手册之ASC超算.pdf)
 - [High Lights-高光时刻](/page/high-light/)
 - [Contributors-贡献者](/page/contributor/)
+- [How-To-如何参与本项目](/page/to-contributors/)
+
+## 更多资源
+
+- [Download-下载中心](/page/download/)
+- [BDCC-东南大学堡垒机登录（需校内VPN）](http://10.128.202.17/index.php)
+- [BDCC-东南大学堡垒机使用手册](https://qiniuyun.hrlee.cn/6377621343334617284032970.pdf)
 
 ## Status
 
