@@ -179,6 +179,7 @@ nav:
     - 超算竞赛快速入门: wiki/ASC-introduction.md
     - Linux基础教程: wiki/Linux-base.md
     - conda与pip基础: wiki/conda&pip_base.md
+    - 如何写Proposal: wiki/Proposal-writing.md
   - High Light: page/high-light.md
   - Contirbutor: page/contributor.md
   - About: page/to-contributors.md
