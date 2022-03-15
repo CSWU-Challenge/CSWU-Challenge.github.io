@@ -30,7 +30,7 @@ hide:
 
 ## 更多资源
 
-- [Download-下载中心](/page/download/)
+- [Download-下载中心](/page/Download/)
 - [BDCC-东南大学堡垒机登录（需校内VPN）](http://10.128.202.17/index.php)
 - [BDCC-东南大学堡垒机使用手册](https://qiniuyun.hrlee.cn/6377621343334617284032970.pdf)
 

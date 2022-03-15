@@ -3,7 +3,7 @@ template: overrides/main.html
 hide:
   - navigation
 ---
-# Download
+# 下载中心
 
 *"眼底龙湖水，胸中黄河月"*
 
