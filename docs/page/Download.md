@@ -2,7 +2,6 @@
 template: overrides/main.html
 hide:
   - navigation
-  - toc
 ---
 # Download
 
