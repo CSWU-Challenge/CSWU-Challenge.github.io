@@ -110,7 +110,7 @@ for i, (inputs, labels) in enumerate(training_set):
 
 ## 使用`.as_tensor`()而不是`.tensor()`
 
-`torch.tensor()`总是会复制数据。如果你想转化一个numpy数组，使用`torch.as_tensor()`或者`torch.from_numpy()`来避免拷贝数据。
+&emsp;&emsp;`torch.tensor()`总是会复制数据。如果你想转化一个numpy数组，使用`torch.as_tensor()`或者`torch.from_numpy()`来避免拷贝数据。
 
 ## 使用梯度剪裁(gradient clipping)
 

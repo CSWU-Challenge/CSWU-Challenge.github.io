@@ -412,6 +412,7 @@ head 是输出头部若干行，如果是输出指定文件的头部则为 heax 
 - 打包并压缩：`tar -acvf ArchiveName FileName`。参数`-a`表示系统根据ArchiveName的后缀自动决定压缩包的类型。你也可以自己指定压缩类型，例如你要压缩为一个tat.gz的包，只需将`-a`换为`-z`，那么即使ArchiveName不是以tar.gz为后缀，系统也会将其压缩为tar.gz包。因为在Linux系统中，后缀往往起一个标识作用，并不能决定文件真正的类型。参数`-v`表示将包里的文件打印到屏幕上。在上面提到的tar命令中，你都可以加入`-v`来让屏幕输出包里的文件。
 
 ![tar3](https://img.zsaqwq.com/images/2022/03/11/tar3.png)
+
 - 查看包内文件：`tar -tvf ArchiveName`
 
 ![tar4](https://img.zsaqwq.com/images/2022/03/11/tar4.png)
