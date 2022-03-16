@@ -31,6 +31,7 @@ template: overrides/main.html
 &emsp;&emsp;OpenAI对此有一篇很漂亮的[论文](https://arxiv.org/pdf/1812.06162.pdf)可供参考。使用大batch size的缺点是，这可能会降低模型的泛化能力。
 
 ## 使用混合精度(AMP)
+
 &emsp;&emsp;Pytorch 1.6增加了混合精度训练的官方实现。使用FP16和FP32混合精度可以训练地更快，而且相比单精度(FP32)训练并没有精度损失。下面是一个使用AMP的例子：
 ````
 import torch
@@ -57,6 +58,7 @@ for data, label in data_iter:
 AMP训练的benchmark可以参考这篇[文章](https://pytorch.org/blog/accelerating-training-on-nvidia-gpus-with-pytorch-automatic-mixed-precision/)
 
 ## 考虑使用另一种优化器
+
 &emsp;&emsp;AdamW往往比Adam有更好的优化效率。相关文章参见[这篇](https://www.fast.ai/2018/07/02/adam-weight-decay/)。
 
 &emsp;&emsp;此外还可以尝试最近异军突起的LAMB优化器。
@@ -91,9 +93,11 @@ for i, (inputs, labels) in enumerate(training_set):
             evaluate_model()                        # ...have no gradients accumulated
 ```
 ## 使用Distributed Data Parallel 来进行多卡训练
+
 &emsp;&emsp;使用`torch.nn.DistributedDataParallel`而不是`torch.nn.DataParallel`来开启多卡训练。这样每个GPU都会由一个独立的CPU核来驱动，避免了`DataParallel`的GIL问题。
 
 ## 将梯度设置为None而不是0
+
 &emsp;&emsp;使用`.zero_grad(set_to_none=True)`而不是`.zero_grad()`。
 
 &emsp;&emsp;这会让内存分配器处理梯度，而不是主动地将他们设置为0。这只会提供一个微量的加速，就像这篇[文档](https://pytorch.org/docs/stable/optim.html)所说的那样，所以不要期待有任何奇迹。
@@ -105,6 +109,7 @@ for i, (inputs, labels) in enumerate(training_set):
 `torch.tensor()`总是会复制数据。如果你想转化一个numpy数组，使用`torch.as_tensor()`或者`torch.from_numpy()`来避免拷贝数据。
 
 ## 使用梯度剪裁(gradient clipping)
+
 &emsp;&emsp;这种方法一开始是用来避免RNN中的梯度爆炸，现在也有实验和理论说明梯度剪裁可以加速收敛。参见这篇[文章](https://openreview.net/forum?id=BJgnXpVYwS)。
 
 &emsp;&emsp;抱抱脸团队实现的[Transformer](https://github.com/huggingface/transformers/blob/7729ef738161a0a182b172fcb7c351f6d2b9c50d/examples/run_squad.py#L156)就是一个非常清晰的使用梯度裁剪的例子，这里面还用了本文提到的其他优化方法，比如AMP。
@@ -112,6 +117,7 @@ for i, (inputs, labels) in enumerate(training_set):
 &emsp;&emsp;现在还不清楚这种方法适用于什么样的模型，不过目前来看它在RNN架构、基于Transformer的架构，以及ResNet架构上表现出很稳定的实用性。
 
 ## 在BatchNorm之前关掉bias
+
 &emsp;&emsp;这非常简单：在BatchNormalization层之前关掉每一层的bias，也就是说,对于一个二维卷积层，把bias参数设为False：`torch.nn.Conv2d(...,bias=False,...)`。（原理参见这篇[文档](https://stackoverflow.com/questions/46256747/can-not-use-both-bias-and-batch-normalization-in-convolution-layers)）
 
 ## 在做validation的时候关掉梯度计算
