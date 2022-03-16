@@ -374,7 +374,6 @@ d$
 ```
 删除光标到行尾间处的字符。
 
-\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ### 关于操作码和对象-ON OPERATORS AND MOTIONS
 
 
@@ -537,7 +536,7 @@ it would be easier to simply type two d's to delete a line.
 6. Now type  u  a few times to undo the  U  and preceding commands.
 7. Now type CTRL-R (keeping CTRL key pressed while hitting R) a few times
  to redo the commands (undo the undo's).
- ```
+```
 
 
 1. 移动光标到以--->标记的行，定位到第一处错误。
