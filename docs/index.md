@@ -22,6 +22,7 @@ hide:
 4. [如何写Proposal](/wiki/Proposal-writing/)
 5. [VIM指令入门](/wiki/vimtutor/)
 6. [PyTorch模型优化思路](/wiki/pytorch-opt/)
+7. [TensorFlow模型优化思路](/wiki/tensorflow-opt/)
 
    
 ## 关于我们
