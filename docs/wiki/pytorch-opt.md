@@ -33,7 +33,8 @@ template: overrides/main.html
 ## 使用混合精度(AMP)
 
 &emsp;&emsp;Pytorch 1.6增加了混合精度训练的官方实现。使用FP16和FP32混合精度可以训练地更快，而且相比单精度(FP32)训练并没有精度损失。下面是一个使用AMP的例子：
-````
+
+```
 import torch
 # Creates once at the beginning of training
 scaler = torch.cuda.amp.GradScaler()
@@ -54,7 +55,8 @@ for data, label in data_iter:
 
    # Updates the scale for next iteration
    scaler.update()
-   ````
+```
+
 AMP训练的benchmark可以参考这篇[文章](https://pytorch.org/blog/accelerating-training-on-nvidia-gpus-with-pytorch-automatic-mixed-precision/)
 
 ## 考虑使用另一种优化器
@@ -79,6 +81,7 @@ AMP训练的benchmark可以参考这篇[文章](https://pytorch.org/blog/acceler
 ## 使用梯度累积
 
 &emsp;&emsp;这种方法变相增加了batch size。如果你的GPU memory不足以容纳较大的batch，你可以把一个batch分几次输入，从而算出总梯度。你可以在调用`optimizaer.step`之前多次调用`.backward`，来实现这个方法。下面是一个例子。
+
 ```
 model.zero_grad()                                   # Reset gradients tensors
 for i, (inputs, labels) in enumerate(training_set):
@@ -92,6 +95,7 @@ for i, (inputs, labels) in enumerate(training_set):
         if (i+1) % evaluation_steps == 0:           # Evaluate the model when we...
             evaluate_model()                        # ...have no gradients accumulated
 ```
+
 ## 使用Distributed Data Parallel 来进行多卡训练
 
 &emsp;&emsp;使用`torch.nn.DistributedDataParallel`而不是`torch.nn.DataParallel`来开启多卡训练。这样每个GPU都会由一个独立的CPU核来驱动，避免了`DataParallel`的GIL问题。
@@ -127,6 +131,7 @@ for i, (inputs, labels) in enumerate(training_set):
 ## 预加载数据
 
 &emsp;&emsp;非常简单，用下面的DataLoaderX替换DataLoader即可：
+
 ```
 from torch.utils.data import DataLoader
 from prefetch_generator import BackgroundGenerator
