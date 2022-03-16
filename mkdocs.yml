@@ -180,6 +180,7 @@ nav:
     - Linux基础教程: wiki/Linux-base.md
     - conda与pip基础: wiki/conda&pip_base.md
     - 如何写Proposal: wiki/Proposal-writing.md
+    - pyTorch模型优化思路: wiki/pytorch-opt.md
   - High Light: page/high-light.md
   - Contirbutor: page/contributor.md
   - How-To: page/to-contributors.md

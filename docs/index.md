@@ -21,6 +21,7 @@ hide:
 3. [conda与pip基础](/wiki/conda&pip_base/)
 4. [如何写Proposal](/wiki/Proposal-writing/)
 5. [VIM指令入门](/wiki/vimtutor/)
+6. [PyTorch模型优化思路](/wiki/pytorch-opt/)
 
    
 ## 关于我们
