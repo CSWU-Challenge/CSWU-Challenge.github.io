@@ -16,6 +16,7 @@ hide:
 - [BDCC东南大学大数据中心使用手册](https://qiniuyun.hrlee.cn/6377621343334617284032970.pdf)
 - [2022智能车竞赛手册--由健雄科协撰写](https://qiniuyun.hrlee.cn/%E7%AB%9E%E8%B5%9B%E6%89%8B%E5%86%8C%E4%B9%8B%E6%99%BA%E8%83%BD%E8%BD%A6.pdf)
 - [2022美赛竞赛手册--由健雄科协撰写](https://qiniuyun.hrlee.cn/%E7%AB%9E%E8%B5%9B%E6%89%8B%E5%86%8C%E4%B9%8B%E6%95%B0%E6%A8%A1%E7%BE%8E%E8%B5%9B.pdf)
+- [HPC集群性能评价--HPL和HPCG测试](http://r8tgaff7g.hd-bkt.clouddn.com/HPC%E9%9B%86%E7%BE%A4%E6%80%A7%E8%83%BD%E8%AF%84%E4%BB%B7--HPL%E5%92%8CHPCG%E6%B5%8B%E8%AF%95.pdf)
 
 
 ## 工具类
