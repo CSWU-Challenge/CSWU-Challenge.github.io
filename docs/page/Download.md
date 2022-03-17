@@ -36,24 +36,37 @@ hide:
 - [并行计算导论](http://qiniuyun.hrlee.cn/%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97%E5%AF%BC%E8%AE%BA%20by%20Ananth%20Grama%20George%20Karypis%20%E5%BC%A0%E6%AD%A6%20%E6%AF%9B%E5%9B%BD%E5%8B%87%20Anshul%20Gupta%20Vipin%20Kumar%20%E7%A8%8B%E6%B5%B7%E8%8B%B1%20%28z-lib.org%29.pdf)
 
 ### Nvidia社区
+
 **Tip:以下文档皆可在[Nvidia On-Demand](https://www.nvidia.cn/on-demand/)找到对应讲座视频**
 
 - [Getting Started With Deep Learning Performance](https://qiniuyun.hrlee.cn/ASC/Getting-Started-With-Deep-Learning-Performance.pdf)
+  
 - [GPU Performance Background User Guide](https://qiniuyun.hrlee.cn/ASC/GPU-Performance-Background-User-Guide.pdf)
+  
 - [Optimizing Linear Fully Connected Layers User Guide](https://qiniuyun.hrlee.cn/ASC/Optimizing-Linear-Fully-Connected-Layers-User-Guide.pdf)
+  
 - [Optimizing Memory Limited Layers User Guide](https://qiniuyun.hrlee.cn/ASC/Optimizing-Memory-Limited-Layers-User-Guide.pdf)
+  
 - [Optimizing Recurrent Layers User Guide](https://qiniuyun.hrlee.cn/ASC/Optimizing-Recurrent-Layers-User-Guide.pdf)
+  
 - [Training Mixed Precision User Guide](https://qiniuyun.hrlee.cn/ASC/Training-Mixed-Precision-User-Guide.pdf)
+  
 - [Taking advantage of mixed precision to- accelerate training using pytorch](https://qiniuyun.hrlee.cn/ASC/Taking-advantage-of-mixed-precision-to-accelerate-training-using-pytorch.pdf)
 
 - [PyTorch Performance Tuning Guide](https://qiniuyun.hrlee.cn/ASC/PyTorch-Performance-Tuning-Guide.pdf)
 
 - [Training AI models faster with distributed training in pytorch part2](https://qiniuyun.hrlee.cn/ASC/Training-AI-models-faster-with-distributed-training-in-pytorch-part2.pdf)
+  
 - [Deep Learning Profiling Technologies](https://qiniuyun.hrlee.cn/ASC/Deep-Learning-Profiling-Technologies.pdf)
+  
 - [Training models 20x faster on gpu in medical image analysis](https://qiniuyun.hrlee.cn/ASC/Training-models-20x-faster-on-gpu-in-medical-image-analysis.pdf)
+  
 - [Training complex GANs with the new pytorch AMP package using nvidia tensor cores](https://qiniuyun.hrlee.cn/ASC/Training-complex-GANs-with-the-new-pytorch-AMP-package-using-nvidia-tensor-cores.pdf)
+  
 - [Training complex GANs with the new pytorch AMP package using nvidia tensor cores](https://qiniuyun.hrlee.cn/ASC/Accelerated-Computing-with-Standard-C++-Python-and-Fortran.pdf)
+  
 - [Accelerate Computing with CUDA Python](https://qiniuyun.hrlee.cn/ASC/Accelerate-Computing-with-CUDA-Python.pdf)
+  
 - [Train Faster A Guide To Tensorflow Performance Optimization](https://qiniuyun.hrlee.cn/ASC/Train-Faster-A-Guide-To-Tensorflow-Performance-Optimization.pdf)
 
 ## 视频类
