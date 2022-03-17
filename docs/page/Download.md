@@ -37,6 +37,7 @@ hide:
 
 ### Nvidia社区
 **Tip:以下文档皆可在[Nvidia On-Demand](https://www.nvidia.cn/on-demand/)找到对应讲座视频**
+
 - [Getting Started With Deep Learning Performance](https://qiniuyun.hrlee.cn/ASC/Getting-Started-With-Deep-Learning-Performance.pdf)
 - [GPU Performance Background User Guide](https://qiniuyun.hrlee.cn/ASC/GPU-Performance-Background-User-Guide.pdf)
 - [Optimizing Linear Fully Connected Layers User Guide](https://qiniuyun.hrlee.cn/ASC/Optimizing-Linear-Fully-Connected-Layers-User-Guide.pdf)
