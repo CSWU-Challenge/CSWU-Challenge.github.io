@@ -8,3 +8,5 @@ hide:
 
 - 对于github相关资源推荐请使用镜像：[fastgit.org](fastgit.org)
 - 对于图片、文件类资源推荐使用：[阿里云OSS](https://www.aliyun.com/product/oss/)、[腾讯云COS](https://console.cloud.tencent.com/cos/bucket)、[七牛云对象存储](https://portal.qiniu.com/home)
+
+另2022年本队内通过自建云服务（顺安云）提供了队内图床和网盘，可在队内咨询后使用。
