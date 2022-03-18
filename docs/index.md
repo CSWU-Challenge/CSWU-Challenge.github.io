@@ -33,6 +33,8 @@ hide:
 
 ## 更多资源
 
+- [SC22-Student Cluster Competition 22](https://sc22.supercomputing.org/program/studentssc/student-cluster-competition/)
+- [ASC-Asia Supercomputing Community](http://www.asc-events.org/)
 - [Download-下载中心](/page/Download/)
 - [BDCC-东南大学堡垒机登录（需校内VPN）](http://10.128.202.17/index.php)
 - [BDCC-东南大学堡垒机使用手册](https://qiniuyun.hrlee.cn/6377621343334617284032970.pdf)
