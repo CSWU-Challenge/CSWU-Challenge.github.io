@@ -131,6 +131,10 @@ extra:
     #- icon: fontawesome/brands/twitter
     #  link: https://twitter.com/squidfunk
 
+# busuanzi
+extra_javascript:
+    - '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'
+
 # Extensions
 markdown_extensions:
   - abbr
