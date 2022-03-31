@@ -43,15 +43,7 @@ hide:
 
 ![Alt](https://repobeats.axiom.co/api/embed/859d02e68eba262193c7b210e597500df78d6881.svg "Repobeats analytics image")
 
-<style>
-  .totelNumTitle {
-    font-size: 15px;
-    font-weight: 600;
-    color: #276747;
-  }
-</style>
-
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <br/>
-<span id="busuanzi_container_site_pv" className='totelNumTitle'>Total Vister:<span id="busuanzi_value_site_pv"></span>Times</span>
+<span id="busuanzi_container_site_pv" style='color: #276747; font-size: 16px; font-weight: 600;'>Total Vister:<span id="busuanzi_value_site_pv"></span>Times</span>
 
