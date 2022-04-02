@@ -313,6 +313,9 @@ ps -ef | grep xhpl
 ```
 就是只看xhpl跑的怎么样
 
+> 注：grep支持regex正则表达式，笔者作为算法工程师（SQL Boy）每天要写一万行Regex, 这里推荐一个小cheat sheet [iHateregex.io](iHateregex.io) 快速查询海量regex
+
+
 #### kill
 杀死某个进程
 
