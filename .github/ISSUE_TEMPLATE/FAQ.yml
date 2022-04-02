@@ -18,5 +18,6 @@ body:
   - type: textarea
       attributes:
         label: 问题描述
+        description: 请在此输入您的问题。
       validations:
         required: true
