@@ -16,8 +16,8 @@ body:
         - label: 资源：[中山大学队长博客](https://wu-kan.cn/tags/)，[上海大学队长博客](https://henryavery.cn/2021/06/17/asc2022/)，[上海交大超算平台用户文档](https://docs.hpc.sjtu.edu.cn/index.html)，[卢森堡大学超算教程](https://ulhpc-tutorials.readthedocs.io/en/latest/)。
           required: false
   - type: textarea
-      attributes:
-        label: 问题描述
-        description: 请在此输入您的问题。
-      validations:
-        required: true
+    attributes:
+      label: 问题描述
+      description: 请在此输入您的问题。
+    validations:
+      required: true
