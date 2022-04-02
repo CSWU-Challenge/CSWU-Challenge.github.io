@@ -9,7 +9,8 @@ body:
       description: 新同学最好能快速地浏览一遍下面提到的教程，对于了解比赛会有很大帮助。
       options:
         - label: 我已经阅读了[超算竞赛快速入门](https://cswu-challenge.github.io/wiki/ASC-introduction/)、[2022超算竞赛手册](https://qiniuyun.hrlee.cn/%E7%AB%9E%E8%B5%9B%E6%89%8B%E5%86%8C%E4%B9%8BASC%E8%B6%85%E7%AE%97.pdf)、[吴院竞赛指导-李浩瑞](https://qiniuyun.hrlee.cn/%E5%90%B4%E9%99%A2%E7%AB%9E%E8%B5%9B%E6%8C%87%E5%AF%BC-%E6%9D%8E%E6%B5%A9%E7%91%9E.pptx)以及该板块下的其他问题。
-          required: true
+      validations:
+        required: true
   - type: checkboxes
     id: other-resources
     attributes:
