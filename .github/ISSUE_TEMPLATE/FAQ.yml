@@ -2,6 +2,7 @@ name: FAQ (Temporary for SC22)
 description: 请清晰、详尽地描述您的问题，在能力范围内，我们将不遗余力地进行解答。
 body:
   - type: checkboxes
+    id: getting-started-guide
     attributes:
       label: "入门指导"
       description: 新同学最好能快速地浏览一遍下面提到的教程，对于了解比赛会有很大帮助。
@@ -9,12 +10,14 @@ body:
         - label: 我已经阅读了[超算竞赛快速入门](https://cswu-challenge.github.io/wiki/ASC-introduction/)、[2022超算竞赛手册](https://qiniuyun.hrlee.cn/%E7%AB%9E%E8%B5%9B%E6%89%8B%E5%86%8C%E4%B9%8BASC%E8%B6%85%E7%AE%97.pdf)、[吴院竞赛指导-李浩瑞](https://qiniuyun.hrlee.cn/%E5%90%B4%E9%99%A2%E7%AB%9E%E8%B5%9B%E6%8C%87%E5%AF%BC-%E6%9D%8E%E6%B5%A9%E7%91%9E.pptx)以及该板块下的其他问题。
           required: true
   - type: checkboxes
+    id: other-resources
     attributes:
       label: "外校资源"
       description: 下面列举了一些外校ASC超算资源，供大家参考，建议收藏。
       options:
         - label: 资源：[中山大学队长博客](https://wu-kan.cn/tags/)，[上海大学队长博客](https://henryavery.cn/2021/06/17/asc2022/)，[上海交大超算平台用户文档](https://docs.hpc.sjtu.edu.cn/index.html)，[卢森堡大学超算教程](https://ulhpc-tutorials.readthedocs.io/en/latest/)。
   - type: textarea
+    id: question
     attributes:
       label: "问题描述"
       description: 请在此输入您的问题。
