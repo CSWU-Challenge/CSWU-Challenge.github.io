@@ -1,6 +1,6 @@
 name: FAQ (Temporary for SC22)
 description: 请清晰、详尽地描述您的问题，在能力范围内，我们将不遗余力地进行解答。
-labels: "help wanted"
+labels: ["help wanted", "good first issue"]
 body:
   - type: checkboxes
     id: getting-started-guide
