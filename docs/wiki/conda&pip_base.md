@@ -31,7 +31,11 @@ conda activate
 ## 创建/删除环境
 
 ```bash
-conda create -n envname python=version
+conda create -n envname python=version # -n 表示 name
+#整体删除envname
+conda remove envname --all 
+#clone 拷贝迁移环境 假设已有环境名为A，需要生成的环境名为B
+clone create -n B --clone A
 ```
 
 进入环境
@@ -57,6 +61,22 @@ conda install package=version
 
 
 ### 依据requirements.txt批量安装包
+#### pip 
+```bash
+pip install -r PathtoRequirementFile/requirements.txt
+```
+#### conda 
+```bash
+conda install --yes--file requirements.txt
+```
 
-## 导出环境配置
-
+### 导出环境配置
+批量导出包含环境中所有组件的requirements.txt文件
+#### pip 
+```bash
+pip freeze > requrirements.txt
+```
+#### conda
+```bash
+conda list -e >requirements.txt
+```
