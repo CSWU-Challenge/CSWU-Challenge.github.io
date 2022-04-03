@@ -31,6 +31,11 @@ hide:
 - [Contributors-贡献者](/page/contributor/)
 - [How-To-如何参与本项目](/page/to-contributors/)
 
+
+在这里引用维基百科的一句话：
+
+> 不要害怕编辑，勇于更新页面！
+
 ## 更多资源
 
 - [SC22-Student Cluster Competition 22](https://sc22.supercomputing.org/program/studentssc/student-cluster-competition/)
