@@ -24,3 +24,10 @@ body:
       description: 请在此输入您的问题。
     validations:
       required: true
+  - type: textarea
+    id: studentID
+    attributes:
+      label: "你的学号"
+      description: 请在此输入你的学号。
+    validations:
+      required: true
