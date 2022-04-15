@@ -18,3 +18,15 @@
   {{ super() }}
   <script src="{{ 'overrides/assets/javascripts/bundle.a375bc7d.min.js' | url }}"></script>
 {% endblock %}
+{% block analytics %}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7Y7KMG2XPN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7Y7KMG2XPN');
+</script>
+{% endblock %}
+
