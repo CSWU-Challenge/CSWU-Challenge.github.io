@@ -187,6 +187,7 @@ nav:
     - VIM指令入门: wiki/vimtutor.md
     - PyTorch模型优化思路: wiki/pytorch-opt.md
     - TensorFlow模型优化思路: wiki/tensorflow-opt.md
+    - MPI基础: wiki/MPI_baby.md
   - High Light: page/high-light.md
   - Contirbutor: page/contributor.md
   - How-To: page/to-contributors.md
