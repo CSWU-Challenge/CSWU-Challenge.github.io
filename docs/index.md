@@ -24,6 +24,7 @@ hide:
 6. [PyTorch模型优化思路](/wiki/pytorch-opt/)
 7. [TensorFlow模型优化思路](/wiki/tensorflow-opt/)
 8. [MPI基础](/wiki/MPI_baby/)
+9. [输入流水线性能指南](https://docs.w3cub.com/tensorflow~guide/performance/datasets_performance)
    
 ## 关于我们
 
