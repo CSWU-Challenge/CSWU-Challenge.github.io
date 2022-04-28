@@ -15,5 +15,6 @@ hide:
 - [SHUN](https://zsaqwq.com/)
 - [JohnG-mit](https://JohnG-mit.github.io)
 - [采庶子](https://github.com/Gfssfa)
+- [Ypsxc111](https://github.com/Ypsxc111)
 
 另外还需要感谢来自东南大学大数据中心、吴健雄学院科技协会的老师与同学们的大力支持。
