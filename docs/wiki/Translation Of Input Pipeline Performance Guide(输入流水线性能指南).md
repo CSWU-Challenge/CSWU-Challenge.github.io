@@ -21,7 +21,7 @@ GPU 和 TPU 可以从根本上减少执行单个训练步骤所需的时间。�
 
 使用[`tf.estimator.Estimator`](https://www.tensorflow.org/api_docs/python/tf/estimator/Estimator)API 时，前两个阶段（提取和转换）在`input_fn`传递给[`tf.estimator.Estimator.train`](https://www.tensorflow.org/api_docs/python/tf/estimator/BaselineClassifier#train). 在代码中，这可能看起来像以下（幼稚的、顺序的）实现：
 
-```cpp
+```python
 def parse_fn(example):
   "Parse TFExample records and perform simple data augmentation."
   example_fmt = {
@@ -66,14 +66,14 @@ API通过转换[`tf.data`](https://www.tensorflow.org/api_docs/python/tf/data)�
 
 要将此更改应用于我们正在运行的示例，请更改：
 
-```cpp
+```python
 dataset = dataset.batch(batch_size=FLAGS.batch_size)
 return dataset
 ```
 
 为：
 
-```cpp
+```python
 dataset = dataset.batch(batch_size=FLAGS.batch_size)
 dataset = dataset.prefetch(buffer_size=FLAGS.prefetch_buffer_size)
 return dataset
@@ -93,13 +93,13 @@ return dataset
 
 要将此更改应用于我们正在运行的示例，请更改：
 
-```cpp
+```python
 dataset = dataset.map(map_func=parse_fn)
 ```
 
 为：
 
-```cpp
+```python
 dataset = dataset.map(map_func=parse_fn, num_parallel_calls=FLAGS.num_parallel_calls)
 ```
 
@@ -107,14 +107,14 @@ dataset = dataset.map(map_func=parse_fn, num_parallel_calls=FLAGS.num_parallel_c
 
 要将此更改应用于我们正在运行的示例，请更改：
 
-```cpp
+```python
 dataset = dataset.map(map_func=parse_fn, num_parallel_calls=FLAGS.num_parallel_calls)
 dataset = dataset.batch(batch_size=FLAGS.batch_size)
 ```
 
 为：
 
-```cpp
+```python
 dataset = dataset.apply(tf.contrib.data.map_and_batch(
     map_func=parse_fn, batch_size=FLAGS.batch_size))
 ```
@@ -136,13 +136,13 @@ dataset = dataset.apply(tf.contrib.data.map_and_batch(
 
 要将此更改应用于我们正在运行的示例，请更改：
 
-```cpp
+```python
 dataset = files.interleave(tf.data.TFRecordDataset)
 ```
 
 为：
 
-```cpp
+```python
 dataset = files.apply(tf.contrib.data.parallel_interleave(
     tf.data.TFRecordDataset, cycle_length=FLAGS.num_parallel_readers))
 ```
