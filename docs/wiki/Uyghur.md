@@ -1,3 +1,10 @@
+---
+template: overrides/main.html
+hide:
+  - navigation
+theme:
+  direction: rtl
+---
 #مۇسابىقە تونۇشتۇرۇش
 سىزگە ياردەم قىلىپ بۇ مۇسابىقە
 
