@@ -3,7 +3,7 @@ template: overrides/main.html
 hide:
   - navigation
 theme:
-  direction: ltr
+  direction: rtl
 ---
 #مۇسابىقە تونۇشتۇرۇش
 سىزگە ياردەم قىلىپ بۇ مۇسابىقە
