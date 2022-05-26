@@ -85,8 +85,8 @@ Tip:以下文档皆可在[Nvidia On-Demand](https://www.nvidia.cn/on-demand/)找
 
 ## 镜像站专题
 
-- 东南大学镜像站： [mirror.seu.edu.cn](mirror.seu.edu.cn) , [mirrors.seu.edu.cn(开发中)](mirrors.seu.edu.cn)
-- Github反代： [fastgit.org](fastgit.org)
+- 东南大学镜像站： [http://mirror.seu.edu.cn](mirror.seu.edu.cn) , [http://mirrors.seu.edu.cn(开发中)](mirrors.seu.edu.cn)
+- Github反代： [fastgit.org](http://fastgit.org)
 
 
 本站所有资源仅供学习和研究使用，请在下载后24小时内删除。
