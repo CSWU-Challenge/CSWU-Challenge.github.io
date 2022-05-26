@@ -83,6 +83,10 @@ Tip:以下文档皆可在[Nvidia On-Demand](https://www.nvidia.cn/on-demand/)找
 ## 工具类
 - [Clash-For-Windows-0.19.12](https://download.fastgit.org/Fndroid/clash_for_windows_pkg/releases/download/0.19.12/Clash.for.Windows.Setup.0.19.12.exe)
 
+## 镜像站专题
+
+- 东南大学镜像站： [mirror.seu.edu.cn](mirror.seu.edu.cn) , [mirrors.seu.edu.cn(开发中)](mirrors.seu.edu.cn)
+- Github反代： [fastgit.org](fastgit.org)
 
 
 本站所有资源仅供学习和研究使用，请在下载后24小时内删除。
