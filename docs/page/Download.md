@@ -74,6 +74,12 @@ Tip:以下文档皆可在[Nvidia On-Demand](https://www.nvidia.cn/on-demand/)找
 ### Nvidia社区
 - [Distributed Training and Fast Inter GPU communication with NCCL](https://qiniuyun.hrlee.cn/ASC/Distributed-Training-and-Fast-Inter-GPU-communication-with-NCCL.ts)
 - [Parallel and Distributed Training of Deep Neural Networks](https://qiniuyun.hrlee.cn/ASC/Parallel-and-Distributed-Training-of-Deep-Neural-Networks.ts)
+
+
+### 他山之玉
+
+- [吴坎酱炒蒜（需校内网络）](https://pan.seu.edu.cn:443/link/793D91F65D342CE43F6A18AB894CE269)
+
 ## 工具类
 - [Clash-For-Windows-0.19.12](https://download.fastgit.org/Fndroid/clash_for_windows_pkg/releases/download/0.19.12/Clash.for.Windows.Setup.0.19.12.exe)
 
