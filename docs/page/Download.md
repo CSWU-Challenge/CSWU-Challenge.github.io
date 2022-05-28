@@ -79,6 +79,7 @@ Tip:以下文档皆可在[Nvidia On-Demand](https://www.nvidia.cn/on-demand/)找
 ### 他山之玉
 
 - [吴坎酱炒蒜（需校内网络）](https://pan.seu.edu.cn:443/link/793D91F65D342CE43F6A18AB894CE269)
+- [常用软件LAMMPS,GROMACS,VASP部署及优化（需校内网络）](https://pan.seu.edu.cn:443/link/8DDD1377BDCD4CE0A5A1EE2943C98F05)
 
 ## 工具类
 - [Clash-For-Windows-0.19.12](https://download.fastgit.org/Fndroid/clash_for_windows_pkg/releases/download/0.19.12/Clash.for.Windows.Setup.0.19.12.exe)
