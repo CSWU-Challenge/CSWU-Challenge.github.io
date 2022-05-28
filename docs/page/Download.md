@@ -83,6 +83,7 @@ Tip:以下文档皆可在[Nvidia On-Demand](https://www.nvidia.cn/on-demand/)找
 
 ## 工具类
 - [Clash-For-Windows-0.19.12](https://download.fastgit.org/Fndroid/clash_for_windows_pkg/releases/download/0.19.12/Clash.for.Windows.Setup.0.19.12.exe)
+- [阿里云盘-LinuxCli](https://github.com/wxy1343/aliyunpan)
 
 ## 镜像站专题
 
