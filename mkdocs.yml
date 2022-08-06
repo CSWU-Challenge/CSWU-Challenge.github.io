@@ -131,10 +131,10 @@ extra:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/squidfunk
 
-# busuanzi
+# Other java
 extra_javascript:
     - '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'
-
+    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 # Extensions
 markdown_extensions:
   - abbr
@@ -187,6 +187,7 @@ nav:
     - VIM指令入门: wiki/vimtutor.md
     - PyTorch模型优化思路: wiki/pytorch-opt.md
     - TensorFlow模型优化思路: wiki/tensorflow-opt.md
+    - Latex环境配置及编译优化: wiki/latex-manual.md
   - High Light: page/high-light.md
   - Contirbutor: page/contributor.md
   - How-To: page/to-contributors.md
