@@ -197,6 +197,7 @@ Windows Registry Editor Version 5.00
 注意需要将代码中外部浏览器路径改为你自己安装的路径。插件默认的正向搜索快捷键为`Ctrl+Alt+J`，反向搜索快捷键为`Ctrl+鼠标单击`。
 
 对于反向搜索，提供两种方式：
+
 1. （推荐）打开SumatraPDF程序，“设置”->“选项”底部“设置反向搜索命令行”，粘贴：
    ```
     "D:\Apps\Microsoft VS Code\Code.exe" "D:\Apps\Microsoft VS Code\resources\app\out\cli.js"  --ms-enable-electron-run-as-node -r -g "%f:%l"
@@ -347,6 +348,7 @@ Windows Registry Editor Version 5.00
 
 ### 快捷键设置
 打开VSCode，按下`F1`，输入`keyboardjson`。下面列举笔者对几个快捷键的设置。
+
 - 编译
   ```json
   {
