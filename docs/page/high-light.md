@@ -11,7 +11,7 @@ hide:
     width: 70%;
 ">
 
-Participates: Zhongheng Guan, Gongrui Zhang, Shunan Pengcheng Huang, Linyao Yu, Xiaolong Ma.
+Participants: Zhongheng Guan, Gongrui Zhang, Shun'an Zhu, Pengcheng Huang, Linxiao Yu, Xiaolong Ma.
 
 Mentor: Jinghui Zhang. Haorui Li.
 
@@ -25,7 +25,7 @@ SCC22 Challenges: [Click Here](https://studentclustercompetition.us/)
     width: 70%;
 ">
 
-Participates: Haorui Li, Yifan Huang, Chenrui Gao, Chaoyang Wang, Jiangtao Wang.
+Participants: Haorui Li, Yifan Huang, Chenrui Gao, Chaoyang Wang, Jiangtao Wang.
 
 Mentor: Jian Li.
 
