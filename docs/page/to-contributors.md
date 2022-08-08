@@ -32,12 +32,12 @@ git clone https://github.com/CSWU-Challenge/CSWU-Challenge.github.io
 &emsp;&emsp;
 您可能已经注意到，在下图所示的页面中，具有这样的结构：
 
-- 头部：导航栏，图中有 **Home, Wiki, High Light, Contributor** 四个标签。
+- 头部：导航栏，图中有 **Home, Wiki, High Light, Contributor, How-To, Download** 四个标签。
 - 左侧：左侧导航栏，用于提供指向不同主题下各页面的链接。图中仅有Wiki一个主题及其下属的一个页面。
-- 右侧：右侧导航栏，用于提供指向本页面各标题的索引（仅生成Markdown中的二、三级标题的索引）。
+- 右侧：右侧导航栏，用于提供指向本页面各标题的索引。
 
 <figure markdown>
-  ![页面结构](https://img.zsaqwq.com/images/2022/03/12/page-structure.png)
+  ![页面结构](https://johng-mit.cn/img/20220808215024.png)
   <!-- <figcaption>Image caption</figcaption> -->
 </figure>
 
@@ -61,7 +61,7 @@ git clone https://github.com/CSWU-Challenge/CSWU-Challenge.github.io
 
 ### 将新文档添加到导航栏
 
-![Page tree](https://img.zsaqwq.com/images/2022/03/13/page-tree.png){ align=left }
+![Page tree](https://johng-mit.cn/img/20220808215145.png){ align=left }
 &emsp;&emsp;
 您现在已经完成一个文档的编写工作，是时候将它添加到导航栏中了！为此，请您注意根目录下的 ***mkdocs.yml*** 文件。在该文件的末尾，您将看到如图所示的“ ***page tree*** ”。在 `nav` 变量下，第一级变量即是头部导航栏中的各个标签，它也将显示为该标签下左侧导航栏中的粗体标题。请您注意 `Wiki` 标签下的 `Linux基础教程` 这一变量，在上文的结构图中，它就是左侧导航栏中Wiki标签下的唯一页面，变量名即是页面名称。 ***请注意，在 `nav` 中所有文件的路径均以docs作为根目录，因此您在指定文件路径时只需要写出文件在docs中的相对路径即可***。
 
@@ -77,12 +77,19 @@ nav:
       - 文章二: ...
   ...
 ```
-效果显示如下图：
-
-<figure markdown>
-  ![page-tree2.png](https://img.zsaqwq.com/images/2022/03/13/page-tree2.png)
-  <!-- <figcaption>Image caption</figcaption> -->
-</figure>
 
 &emsp;&emsp;
 一个简短的总结：nav标签下第一级变量为头部导航标签，第二级变量为标签下各子页面。若想在当前标签下创建新的分类标题，就在第二级变量下添加第三级变量。文件的路径是以docs为根目录的相对路径。
+
+### 在本地生成静态页面预览
+&emsp;&emsp;
+在推送前，建议您先在本地预览添加或修改后的新页面，检查是否出现渲染错误、错别字等需要修正的地方。
+```python
+# 依赖
+pip install mkdocs-material
+pip install mkdocs-minify-plugin
+pip install mkdocs-redirects
+
+# 生成静态页面并通过本地访问
+mkdocs serve
+```
