@@ -5,6 +5,20 @@ hide:
 ---
 # High Light
 
+## SCC 22 Final Vitual (First Time in SEU History)
+
+<img alt="2022" src="https://qiniuyun.hrlee.cn/SC22New.jpeg" style="
+    width: 70%;
+">
+
+Participates: Zhongheng Guan, Gongrui Zhang, Shunan Pengcheng Huang, Linyao Yu, Xiaolong Ma.
+
+Mentor: Jinghui Zhang. Haorui Li.
+
+SCC22 Challenges: [Click Here](https://studentclustercompetition.us/) 
+
+
+
 ## ASC 20-21 First Prize
 
 <img alt="2018" src="https://qiniuyun.hrlee.cn/ASC20-21new.jpg" style="
