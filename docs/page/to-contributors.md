@@ -32,8 +32,8 @@ git clone https://github.com/CSWU-Challenge/CSWU-Challenge.github.io
 &emsp;&emsp;
 您可能已经注意到，在下图所示的页面中，具有这样的结构：
 
-- 头部：导航栏，图中有 **Home, Wiki, High Light, Contributor, How-To, Download** 四个标签。
-- 左侧：左侧导航栏，用于提供指向不同主题下各页面的链接。图中仅有Wiki一个主题及其下属的一个页面。
+- 头部：导航栏，图中有 **Home, Wiki, High Light, Contributor, How-To, Download** 六个标签。
+- 左侧：左侧导航栏，用于提供指向不同主题下各页面的链接。图中仅有Wiki一个主题及其下属的若干页面。
 - 右侧：右侧导航栏，用于提供指向本页面各标题的索引。
 
 <figure markdown>
@@ -61,9 +61,12 @@ git clone https://github.com/CSWU-Challenge/CSWU-Challenge.github.io
 
 ### 将新文档添加到导航栏
 
-![Page tree](https://johng-mit.cn/img/20220808215145.png){ align=left }
+<figure markdown>
+  ![Page tree](https://johng-mit.cn/img/20220808215145.png){ width="203" }
+</figure>
+
 &emsp;&emsp;
-您现在已经完成一个文档的编写工作，是时候将它添加到导航栏中了！为此，请您注意根目录下的 ***mkdocs.yml*** 文件。在该文件的末尾，您将看到如图所示的“ ***page tree*** ”。在 `nav` 变量下，第一级变量即是头部导航栏中的各个标签，它也将显示为该标签下左侧导航栏中的粗体标题。请您注意 `Wiki` 标签下的 `Linux基础教程` 这一变量，在上文的结构图中，它就是左侧导航栏中Wiki标签下的唯一页面，变量名即是页面名称。 ***请注意，在 `nav` 中所有文件的路径均以docs作为根目录，因此您在指定文件路径时只需要写出文件在docs中的相对路径即可***。
+您现在已经完成一个文档的编写工作，是时候将它添加到导航栏中了！为此，请您注意根目录下的 ***mkdocs.yml*** 文件。在该文件的末尾，您将看到如图所示的“ ***page tree*** ”。在 `nav` 变量下，第一级变量即是头部导航栏中的各个标签，它也将显示为该标签下左侧导航栏中的粗体标题。请您注意 `Wiki` 标签下的 `Linux基础教程` 这一变量，在上文的结构图中，它就是左侧导航栏中Wiki标签下的其中一个页面，变量名即是页面名称。 ***请注意，在 `nav` 中所有文件的路径均以docs作为根目录，因此您在指定文件路径时只需要写出文件在docs中的相对路径即可***。
 
 &emsp;&emsp;
 也许您也想在某个标签下的左侧导航栏中创建多个标题以对文档进行分类。我们假设您想在wiki标签下达成该效果，可以这样做：
