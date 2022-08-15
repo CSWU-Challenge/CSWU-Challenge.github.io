@@ -50,4 +50,4 @@ hide:
 
 ![Alt](https://repobeats.axiom.co/api/embed/859d02e68eba262193c7b210e597500df78d6881.svg "Repobeats analytics image")
 
-<img src='http://newwebtrackmyclick-cn-hangzhou.log.aliyuncs.com/logstores/myclick/track.gif?APIVersion=0.6.0&key1=val1&key2=val2'/>
+<img src='http://newwebtrackmyclick.cn-hangzhou.log.aliyuncs.com/logstores/myclick/track.gif?APIVersion=0.6.0&key1=val1&key2=val2'/>
