@@ -188,7 +188,7 @@ nav:
     - PyTorch模型优化思路: wiki/pytorch-opt.md
     - TensorFlow模型优化思路: wiki/tensorflow-opt.md
     - Latex环境配置及编译优化: wiki/latex-manual.md
-    - c++并行编程入门： wiki/parallel_coding.md
+    - c++并行编程入门: wiki/parallel_coding.md
   - High Light: page/high-light.md
   - Contirbutor: page/contributor.md
   - How-To: page/to-contributors.md
