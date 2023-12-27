@@ -47,8 +47,3 @@ hide:
 - [BDCC-东南大学堡垒机登录（需校内VPN）](http://10.128.202.17/index.php)
 - [BDCC-东南大学堡垒机使用手册](https://qiniuyun.hrlee.cn/6377621343334617284032970.pdf)
 
-## Status
-
-![Alt](https://repobeats.axiom.co/api/embed/859d02e68eba262193c7b210e597500df78d6881.svg "Repobeats analytics image")
-
-<img src='http://newwebtrackmyclick.cn-hangzhou.log.aliyuncs.com/logstores/myclick/track_ua.gif?APIVersion=0.6.0&key1=val1&key2=val2'/>
