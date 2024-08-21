@@ -182,6 +182,7 @@ nav:
     - Latex环境配置及编译优化: wiki/latex-manual.md
     - c++并行编程入门: wiki/parallel_coding.md
     - 从内存到屏幕：GUI 显示手段的进化史: wiki/how-gui-work.md
+    - cuda编程(待完善): wiki/cuda-project.md
   - High Light: page/high-light.md
   - Contirbutor: page/contributor.md
   - How-To: page/to-contributors.md
