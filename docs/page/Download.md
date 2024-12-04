@@ -28,12 +28,12 @@ hide:
 - [Linux-UNIX系统编程手册（上、下册） by Michael Kerrisk](https://qiniuyun.hrlee.cn/ASC/Linux-UNIX%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B%E6%89%8B%E5%86%8C%EF%BC%88%E4%B8%8A%E3%80%81%E4%B8%8B%E5%86%8C%EF%BC%89%20by%20Michael%20Kerrisk%20%28z-lib.org%29.pdf)
 - [Linux高性能服务器编程](https://qiniuyun.hrlee.cn/ASC/Linux%E9%AB%98%E6%80%A7%E8%83%BD%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E7%A8%8B.pdf)
 - [UNIX网络编程卷1](https://qiniuyun.hrlee.cn/ASC/UNIX%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%8D%B71--%E5%A5%97%E6%8E%A5%E5%8F%A3%EF%BC%88%E7%AC%AC2%E7%89%88%EF%BC%89.pdf)
-- [UNIX网络编程卷2](https://qiniuyun.hrlee.cn/ASC/UNIX%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%8D%B72--%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1%EF%BC%88%E7%AC%AC2%E7%89%88%EF%BC%89.pdf)
+- [UNIX网络编程卷2](https://seuhpcwiki.oss-cn-nanjing.aliyuncs.com/ASC_UNIX%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%8D%B72--%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1%EF%BC%88%E7%AC%AC2%E7%89%88%EF%BC%89%20%281%29.pdf?Expires=1733296880&OSSAccessKeyId=TMP.3KgcU1WvTVp7vNqXvzvTXvDFaeQ8Q8Nkr9dtPDnGzqKoS8QBPRTwfhHHHcH1XHWXKivFWQzxG7Y3BSD37DdBc3nrxpn8Ah&Signature=0kJL%2B99xyzoJ0GcIHkqGpZ3R9jc%3D)
 
 ### 并行计算相关
 - [国产异构系统上的HPCG并行算法及高效实现](http://qiniuyun.hrlee.cn/%E5%9B%BD%E4%BA%A7%E5%BC%82%E6%9E%84%E7%B3%BB%E7%BB%9F%E4%B8%8A%E7%9A%84HPCG%E5%B9%B6%E8%A1%8C%E7%AE%97%E6%B3%95%E5%8F%8A%E9%AB%98%E6%95%88%E5%AE%9E%E7%8E%B0.pdf)
-- [多核异构并行计算OpenMP 4.5 C/C++篇](http://qiniuyun.hrlee.cn/%E5%A4%9A%E6%A0%B8%E5%BC%82%E6%9E%84%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97OpenMP%204.5%20C_C%2B%2B%E7%AF%87%20by%20%E9%9B%B7%E6%B4%AA%20%28z-lib.org%29.pdf)
-- [并行计算导论](http://qiniuyun.hrlee.cn/%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97%E5%AF%BC%E8%AE%BA%20by%20Ananth%20Grama%20George%20Karypis%20%E5%BC%A0%E6%AD%A6%20%E6%AF%9B%E5%9B%BD%E5%8B%87%20Anshul%20Gupta%20Vipin%20Kumar%20%E7%A8%8B%E6%B5%B7%E8%8B%B1%20%28z-lib.org%29.pdf)
+- [多核异构并行计算OpenMP 4.5 C/C++篇](https://seuhpcwiki.oss-cn-nanjing.aliyuncs.com/ASC_%E5%A4%9A%E6%A0%B8%E5%BC%82%E6%9E%84%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97OpenMP%204.5%20C_C%2B%2B%E7%AF%87%20by%20%E9%9B%B7%E6%B4%AA%20%28z-lib.org%29%20%281%29.pdf?Expires=1733296922&OSSAccessKeyId=TMP.3KgcU1WvTVp7vNqXvzvTXvDFaeQ8Q8Nkr9dtPDnGzqKoS8QBPRTwfhHHHcH1XHWXKivFWQzxG7Y3BSD37DdBc3nrxpn8Ah&Signature=oZWsQdyYAIFTo%2BdVnW1xRQokJx0%3D)
+- [并行计算导论](https://seuhpcwiki.oss-cn-nanjing.aliyuncs.com/%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97%E5%AF%BC%E8%AE%BA%20by%20Ananth%20Grama%20George%20Karypis%20%E5%BC%A0%E6%AD%A6%20%E6%AF%9B%E5%9B%BD%E5%8B%87%20Anshul%20Gupta%20Vipin%20Kumar%20%E7%A8%8B%E6%B5%B7%E8%8B%B1%20%28z-lib.org%29.pdf?Expires=1733296854&OSSAccessKeyId=TMP.3KgcU1WvTVp7vNqXvzvTXvDFaeQ8Q8Nkr9dtPDnGzqKoS8QBPRTwfhHHHcH1XHWXKivFWQzxG7Y3BSD37DdBc3nrxpn8Ah&Signature=3GUj8OLuFaCmaweBZLFvomUnVfI%3D)
 
 ### Nvidia社区
 
