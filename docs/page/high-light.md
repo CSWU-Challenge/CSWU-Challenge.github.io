@@ -5,6 +5,16 @@ hide:
 ---
 # High Light
 
+## Recruiting Tasks released
+
+Recruiting for new team members! 
+
+Try to solve [Task1](https://github.com/CSWU-Challenge/2024SEU_ASC_Campus_Competition_OMP) and [Task2](https://github.com/CSWU-Challenge/2024SEU_ASC_Campus_Competition_CUDA)
+
+## ASC 23 Second Prize
+
+## ASC 22 Second Prize
+
 ## SCC 22 Final Vitual (First Time in SEU History)
 
 <img alt="2022" src="https://qiniuyun.hrlee.cn/SC22New.jpeg" style="
