@@ -27,6 +27,7 @@ hide:
 8. [MPI基础](/wiki/MPI_baby/)
 9. [输入流水线性能指南](https://docs.w3cub.com/tensorflow~guide/performance/datasets_performance)
 10. [c++并行编程速成](/wiki/parallel_coding/)
+11. [CUDA编程入门](https://github.com/BBuf/how-to-optim-algorithm-in-cuda)
    
 ## 关于我们
 
